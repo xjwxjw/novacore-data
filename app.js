@@ -18,7 +18,7 @@ async function api(path){
 const link = (params,title) => '<a href="#benchmark/fdb15/samples?'+esc(new URLSearchParams(params))+'">'+title+'</a>';
 const card=(title,v,params)=>'<div class="card"><span>'+title+'</span><strong>'+(params?link(params,num(v)):esc(v))+'</strong></div>';
 function overview(s,records,all){
-  return '<h1>Benchmark 目录</h1><section class="entry"><h2><a href="'+bench+'">FullDuplexBench v1.5</a></h2><p>全双工语音交互 · 第 '+s.status.last_review+' 批已审阅</p>'+distributionChart(s,records,all,'#overview')+coverage(s)+'</section>';
+  return '<h1>Benchmark 目录</h1><section class="entry"><h2>FullDuplexBench v1.5</h2><p>用有插话与无插话的两次测试，对照模型的停声、接话时机与回应内容。第 '+s.status.last_review+' 批已审阅</p>'+distributionChart(s,records,all,'#overview')+coverage(s)+'</section>';
 }
 function coverage(s){
   const {bilingual,whole_review_clear:reviewed}=s.coverage;
@@ -55,7 +55,11 @@ function sample(d){
 }
 async function render(){
   const current=++version;
-  const [route,query]=location.hash.slice(1).split('?');
+  let [route,query]=location.hash.slice(1).split('?');
+  if(route==='benchmark/fdb15' || route==='benchmark/fdb15/'){
+    route='overview';
+    history.replaceState(null,'','#overview'+(query?'?'+query:''));
+  }
   try{
     const s=await api('/api/summary');
     let body;
@@ -70,7 +74,7 @@ async function render(){
       const records=await json('fdb15.json');
       if(section==='cases')body=caseList(records,new URLSearchParams(query));
       else if(section?.startsWith('case/'))body=officialCase(records.find(r=>r.id===section.slice(5)),await api('/api/cases'),origin);
-      else body=benchmarkHome(s,records,all);
+      else body=overview(s,records,all);
     }
     if(current!==version)return;
     app.innerHTML=body+'<footer>索引更新于 '+esc(s.updated)+' · 每 5 分钟同步</footer>';

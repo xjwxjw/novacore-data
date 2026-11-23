@@ -8,7 +8,7 @@ const focus = {
 };
 function benchmarkFrame(tab,body){
   const tabs=[['','概览'],['cases','官方测试案例'],['samples','对应构建的数据']];
-  return '<a href="#overview">Benchmark 目录</a><h1>FullDuplexBench v1.5</h1><div class="bench-tabs">'+tabs.map(([key,title])=>'<a '+(tab===key?'aria-current="page" ':'')+'href="'+bench+(key?'/'+key:'')+'">'+title+'</a>').join('')+'</div>'+body;
+  return '<a href="#overview">Benchmark 目录</a><h1>FullDuplexBench v1.5</h1><div class="bench-tabs">'+tabs.map(([key,title])=>'<a '+(tab===key?'aria-current="page" ':'')+'href="'+(key?bench+'/'+key:'#overview')+'">'+title+'</a>').join('')+'</div>'+body;
 }
 function distributionChart(s, records, all, route) {
   const pool = 'full_duplex_bench_v15';
@@ -48,9 +48,6 @@ function distributionChart(s, records, all, route) {
   return '<figure class="distribution"><div class="flow-heading"><h2>案例类型分布</h2><div class="flow-toggle" aria-label="合成数据范围">'+toggle(false,'FDB 专项')+toggle(true,'全部合成')+'</div></div><p class="flow-note">左侧按官方案例计数，右侧按已审阅文本的主要交互类型计数。各侧占比以各自总数为分母。</p><div class="flow-chart">'+
     root('left','Benchmark',leftTotal,'官方测试案例',bench+'/cases')+branches('left',leftTotal)+'<div class="flow-rows">'+lines+'</div>'+branches('right',rightTotal)+root('right','合成数据',rightTotal,all?'全部已审阅文本':'FDB 专项文本',rightUrl)+
     '</div><figcaption>第 '+s.status.last_review+' 批 · 点击任一侧的数量可查看对应数据。</figcaption></figure>';
-}
-function benchmarkHome(s,records,all){
-  return benchmarkFrame('','<p>用有插话与无插话的两次测试，对照模型的停声、接话时机与回应内容。</p>'+distributionChart(s,records,all,bench)+coverage(s)+'<p class="muted">已审阅 '+num(s.status.reviewed_texts)+' / '+num(s.status.goal)+' 段 · 训练准入'+(s.status.training_admitted?'已开放':'未开放')+'</p>');
 }
 function caseList(records,q){
   const type=q.get('type')||'',term=(q.get('q')||'').trim().toLowerCase();
