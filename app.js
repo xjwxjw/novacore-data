@@ -18,7 +18,7 @@ async function api(path){
 const link = (params,title) => '<a href="#benchmark/fdb15/samples?'+esc(new URLSearchParams(params))+'">'+title+'</a>';
 const card=(title,v,params)=>'<div class="card"><span>'+title+'</span><strong>'+(params?link(params,num(v)):esc(v))+'</strong></div>';
 function overview(s,records,all){
-  return '<h1>Benchmark 目录</h1><section class="entry"><h2>FullDuplexBench v1.5</h2><p>用有插话与无插话的两次测试，对照模型的停声、接话时机与回应内容。第 '+s.status.last_review+' 批已审阅</p>'+distributionChart(s,records,all,'#overview')+coverage(s)+'</section>';
+  return '<h1>Benchmark 目录</h1><section class="entry"><div class="entry-heading"><h2>FullDuplexBench v1.5</h2><a class="button" href="#benchmark/fdb15/pipeline">数据合成流程</a></div><p>用有插话与无插话的两次测试，对照模型的停声、接话时机与回应内容。第 '+s.status.last_review+' 批已审阅</p>'+distributionChart(s,records,all,'#overview')+coverage(s)+'</section>';
 }
 function coverage(s){
   const {bilingual,whole_review_clear:reviewed}=s.coverage;
@@ -68,6 +68,7 @@ async function render(){
     const all=new URLSearchParams(query).get('scope')==='all';
     if(!route||route==='overview')body=overview(s,await json('fdb15.json'),all);
     else if(section?.startsWith('sample/'))body=benchmarkFrame('samples',sample(await api('/api/sample/'+encodeURIComponent(section.slice(7)))));
+    else if(section==='pipeline')body=synthesisPipeline(s);
     else if(section==='samples')body=benchmarkFrame('samples',await samples(s,new URLSearchParams(query)));
     else if(section==='coverage')body=benchmarkFrame('coverage',coverage(s));
     else{
