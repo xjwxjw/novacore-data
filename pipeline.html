@@ -4,30 +4,68 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>数据合成流程 · NovaCore</title>
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="style.css?v=fdb-flow">
 </head>
 <body>
-<header><b><i>▥</i> NovaCore</b><span>数据目录</span><nav><a href="./#overview">Benchmark 目录</a><a aria-current="page" href="pipeline.html">数据合成流程</a></nav></header>
+<header><b><i>▥</i> NovaCore</b><span>数据目录</span><nav><a href="./#overview">Benchmark 目录</a></nav></header>
 <main>
-<a href="./#overview">返回概览</a>
+<a href="./#overview">返回 FullDuplexBench v1.5 概览</a>
 <h1>数据合成流程</h1>
 <p class="muted">FullDuplexBench v1.5 · Stage 2 · 当前已审阅至第 <span data-metric="batch">—</span> 批</p>
+<figure class="pipeline-diagram">
+<figcaption><strong>FullDuplexBench v1.5 合成主流程</strong><span>点击阶段框查看处理细节</span></figcaption>
+<svg viewBox="0 0 500 660" role="group" aria-label="数据合成流程框图，实线表示处理顺序，虚线表示返修或补齐覆盖">
+<defs>
+  <marker id="main-arrow" viewBox="0 0 16 16" markerUnits="userSpaceOnUse" markerWidth="16" markerHeight="16" refX="15" refY="8" orient="auto"><path d="M0 0 16 8 0 16Z" fill="#146d64"/></marker>
+  <marker id="retry-arrow" viewBox="0 0 16 16" markerUnits="userSpaceOnUse" markerWidth="16" markerHeight="16" refX="15" refY="8" orient="auto"><path d="M0 0 16 8 0 16Z" fill="#ac591f"/></marker>
+</defs>
+<g class="pipe-wire" aria-hidden="true">
+  <path d="M133 56 V74 H250 M367 56 V74 H250"/><path class="forward" d="M250 74 V96"/>
+  <path class="forward" d="M250 140 V172"/>
+  <path d="M250 216 V234"/><path class="forward" d="M250 234 H133 V256"/><path class="forward" d="M250 234 H367 V256"/>
+  <path d="M133 300 V318 H250 M367 300 V318 H250"/><path class="forward" d="M250 318 V340"/>
+  <path d="M250 384 V402"/><path class="forward" d="M250 402 H133 V424"/><path class="forward" d="M250 402 H367 V424"/>
+  <path d="M133 468 V486 H250 M367 468 V486 H250"/><path class="forward" d="M250 486 V508"/>
+  <path class="forward" d="M250 552 V584"/>
+</g>
+<g class="pipe-return" aria-hidden="true">
+  <path d="M147 362 H18 V118 H145"/><path d="M353 530 H481 V446 H456"/>
+</g>
+<g class="return-label" aria-hidden="true">
+  <text transform="translate(13 244) rotate(-90)">覆盖缺口回到下一批</text>
+  <text x="417" y="515">时序返修</text>
+</g>
+<g class="chart-nodes">
+  <a href="#source-data"><rect x="45" y="12" width="176" height="44"/><text x="133" y="40">已有语料</text></a>
+  <a href="#source-new"><rect x="279" y="12" width="176" height="44"/><text x="367" y="40">新构造素材</text></a>
+  <a href="#batch-plan"><rect x="147" y="96" width="206" height="44"/><text x="250" y="124">分配批次任务</text></a>
+  <a href="#script"><rect x="147" y="172" width="206" height="44"/><text x="250" y="200">多轮对白与事件编排</text></a>
+  <a href="#review-text"><rect x="45" y="256" width="176" height="44"/><text x="133" y="284">独立文本审核</text></a>
+  <a href="#review-audio"><rect x="279" y="256" width="176" height="44"/><text x="367" y="284">分层音频抽检</text></a>
+  <a href="#batch-review"><rect x="147" y="340" width="206" height="44"/><text x="250" y="368">闭批与累计覆盖复查</text></a>
+  <a href="#render-standard"><rect x="45" y="424" width="176" height="44"/><text x="133" y="452">普通与通用双工合成</text></a>
+  <a href="#render-special"><rect x="279" y="424" width="176" height="44"/><text x="367" y="452">FDB 专项合成</text></a>
+  <a href="#verify-wave"><rect x="147" y="508" width="206" height="44"/><text x="250" y="536">核对波形与事件时序</text></a>
+  <a href="#index-release" class="terminal"><rect x="132" y="584" width="236" height="50"/><text x="250" y="615">样本索引与训练准入核对</text></a>
+</g>
+</svg>
+</figure>
 <div class="pipe-map">
 <section class="pipe-group">
 <h2>素材与目标</h2>
 <div class="pipe-fork">
-<div class="pipe-stage">
+<div class="pipe-stage" id="source-data">
 <h3>已有语料</h3>
 <p>从中英文数据集选取问答、对话或真实环境声。保留数据集版本、原始记录和可用的来源标识。</p>
 <small>例如 SODA、Magpie、COIG-CQIA、AVQA</small>
 </div>
-<div class="pipe-stage">
+<div class="pipe-stage" id="source-new">
 <h3>新构造的素材</h3>
 <p>按主题生成新的口语内容，或按规则构造有确定答案的数值任务。记录生成模型或构造规则。</p>
 <small>例如 DeepSeek V4 Flash 生成的 FDB 素材</small>
 </div>
 </div>
-<div class="pipe-stage">
+<div class="pipe-stage" id="batch-plan">
 <h3>分配本批任务</h3>
 <p>把素材分配给普通对话、通用双工或 FDB 专项。按语言、话题、时长档和累计覆盖缺口规划样本。</p>
 <small>每批 512 段文本</small>
@@ -39,24 +77,24 @@
 </section>
 <section class="pipe-group">
 <h2>对白生成与批次审核</h2>
-<div class="pipe-stage">
+<div class="pipe-stage" id="script">
 <h3>写成可朗读的多轮对白</h3>
 <p>从来源素材扩写双方台词，安排双工事件插入哪一轮。记录插入前后的话、说话对象和助手接下来如何回应。</p>
 <small>产物：对白脚本、交互事件和文本版本</small>
 </div>
 <div class="pipe-fork">
-<div class="pipe-stage">
+<div class="pipe-stage" id="review-text">
 <h3>独立文本审核</h3>
 <p>Qwen3.8-27B 检查整段对白，并审查事件与首个回应的语义。做话题标注、相似度检查和官方案例匹配。</p>
 <small>覆盖报告区分已出现与整段审核通过</small>
 </div>
-<div class="pipe-stage">
+<div class="pipe-stage" id="review-audio">
 <h3>分层音频抽检</h3>
 <p>从专项样本中按语言、时长档等条件选取对白，合成并对齐音频。用 Qwen ASR 与 FireRed ASR 回读，核对实际说出的内容。</p>
 <small>两套 ASR 的结果仅适用于被检查的录音</small>
 </div>
 </div>
-<div class="pipe-stage">
+<div class="pipe-stage" id="batch-review">
 <h3>汇总本批与累计覆盖</h3>
 <p>收集审核记录和抽检结果，更新整段审核结论、场景缺口与批次报告。闭批后调度批量语音生产。</p>
 <small>已审阅文本：<span data-metric="texts">—</span> 段</small>
@@ -69,18 +107,18 @@
 <section class="pipe-group">
 <h2>双轨音频合成</h2>
 <div class="pipe-fork">
-<div class="pipe-stage">
+<div class="pipe-stage" id="render-standard">
 <h3>普通对话与通用双工</h3>
 <p>读取当前采用的脚本，用标准语音合成流程渲染用户与助手音轨。</p>
 <small>按脚本版本登记音频</small>
 </div>
-<div class="pipe-stage">
+<div class="pipe-stage" id="render-special">
 <h3>FDB 专项</h3>
 <p>逐句合成中文与英文语音，分别使用 CosyVoice 和 Kokoro。对齐后把插话叠进助手发言，组装双轨音频及事件对照。</p>
 <small>记录事件起止采样点、助手停声与再开口位置</small>
 </div>
 </div>
-<div class="pipe-stage">
+<div class="pipe-stage" id="verify-wave">
 <h3>核对波形与时序</h3>
 <p>核对样本 ID、文本版本和音频哈希；从波形检查声道、时长及实测回复时延。专项事件还检查语音重叠和对照音频。</p>
 <small>当前关联音频：<span data-metric="audio">—</span> 段 · 回复时延目标 480 ms</small>
@@ -92,12 +130,12 @@
 </section>
 <section class="pipe-group">
 <h2>索引与训练准入</h2>
-<div class="pipe-stage">
+<div class="pipe-stage" id="index-release">
 <h3>按样本关联证据</h3>
 <p>用同一条样本记录关联原始素材、采用的对白、双轨音频及已有审核结果。管理系统定时扫描批次与音频清单。</p>
 <small>可在样本详情页追溯来源和处理过程</small>
 </div>
-<div class="pipe-stage">
+<div class="pipe-stage" id="release">
 <h3>核对全量数据，记录准入状态</h3>
 <p>达到目标数量后还要汇总最终清单、与 benchmark 的对齐结果及待修正的问题。训练准入读取生产端的独立状态。</p>
 <small>目标 <span data-metric="goal">—</span> 段 · <span data-metric="admission">—</span>
