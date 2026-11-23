@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>数据合成流程 · NovaCore</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header><b><i>▥</i> NovaCore</b><span>数据目录</span><nav><a href="./#overview">Benchmark 目录</a><a aria-current="page" href="pipeline.html">数据合成流程</a></nav></header>
+<main>
+<a href="./#overview">返回概览</a>
+<h1>数据合成流程</h1>
+<p class="muted">FullDuplexBench v1.5 · Stage 2 · 当前已审阅至第 <span data-metric="batch">—</span> 批</p>
+<div class="pipe-map">
+<section class="pipe-group">
+<h2>素材与目标</h2>
+<div class="pipe-fork">
+<div class="pipe-stage">
+<h3>已有语料</h3>
+<p>从中英文数据集选取问答、对话或真实环境声。保留数据集版本、原始记录和可用的来源标识。</p>
+<small>例如 SODA、Magpie、COIG-CQIA、AVQA</small>
+</div>
+<div class="pipe-stage">
+<h3>新构造的素材</h3>
+<p>按主题生成新的口语内容，或按规则构造有确定答案的数值任务。记录生成模型或构造规则。</p>
+<small>例如 DeepSeek V4 Flash 生成的 FDB 素材</small>
+</div>
+</div>
+<div class="pipe-stage">
+<h3>分配本批任务</h3>
+<p>把素材分配给普通对话、通用双工或 FDB 专项。按语言、话题、时长档和累计覆盖缺口规划样本。</p>
+<small>每批 512 段文本</small>
+</div>
+<details class="pipe-note">
+<summary>FDB 的四类目标如何进入写稿？</summary>
+<p>把用户打断、用户附和、对旁人讲话和背景语音作为场景条件，同时指定主任务、插入语音与预期话轮行为。官方案例用于设定目标与后续比对。</p>
+</details>
+</section>
+<section class="pipe-group">
+<h2>对白生成与批次审核</h2>
+<div class="pipe-stage">
+<h3>写成可朗读的多轮对白</h3>
+<p>从来源素材扩写双方台词，安排双工事件插入哪一轮。记录插入前后的话、说话对象和助手接下来如何回应。</p>
+<small>产物：对白脚本、交互事件和文本版本</small>
+</div>
+<div class="pipe-fork">
+<div class="pipe-stage">
+<h3>独立文本审核</h3>
+<p>Qwen3.8-27B 检查整段对白，并审查事件与首个回应的语义。做话题标注、相似度检查和官方案例匹配。</p>
+<small>覆盖报告区分已出现与整段审核通过</small>
+</div>
+<div class="pipe-stage">
+<h3>分层音频抽检</h3>
+<p>从专项样本中按语言、时长档等条件选取对白，合成并对齐音频。用 Qwen ASR 与 FireRed ASR 回读，核对实际说出的内容。</p>
+<small>两套 ASR 的结果仅适用于被检查的录音</small>
+</div>
+</div>
+<div class="pipe-stage">
+<h3>汇总本批与累计覆盖</h3>
+<p>收集审核记录和抽检结果，更新整段审核结论、场景缺口与批次报告。闭批后调度批量语音生产。</p>
+<small>已审阅文本：<span data-metric="texts">—</span> 段</small>
+</div>
+<details class="pipe-note">
+<summary>覆盖不足或写稿失败时回到哪里？</summary>
+<p>写稿失败的任务可以重试或更换候选；可修复的问题进入返修。每批新增证据与此前批次合并，仍缺的场景用于调整后续批次的任务分配。</p>
+</details>
+</section>
+<section class="pipe-group">
+<h2>双轨音频合成</h2>
+<div class="pipe-fork">
+<div class="pipe-stage">
+<h3>普通对话与通用双工</h3>
+<p>读取当前采用的脚本，用标准语音合成流程渲染用户与助手音轨。</p>
+<small>按脚本版本登记音频</small>
+</div>
+<div class="pipe-stage">
+<h3>FDB 专项</h3>
+<p>逐句合成中文与英文语音，分别使用 CosyVoice 和 Kokoro。对齐后把插话叠进助手发言，组装双轨音频及事件对照。</p>
+<small>记录事件起止采样点、助手停声与再开口位置</small>
+</div>
+</div>
+<div class="pipe-stage">
+<h3>核对波形与时序</h3>
+<p>核对样本 ID、文本版本和音频哈希；从波形检查声道、时长及实测回复时延。专项事件还检查语音重叠和对照音频。</p>
+<small>当前关联音频：<span data-metric="audio">—</span> 段 · 回复时延目标 480 ms</small>
+</div>
+<details class="pipe-note">
+<summary>音频有问题时怎样返修？</summary>
+<p>未生成的样本进入待处理清单。可修复的时序问题进入重合成与复核；登记采用的修订版本，再把它关联到对应文本。</p>
+</details>
+</section>
+<section class="pipe-group">
+<h2>索引与训练准入</h2>
+<div class="pipe-stage">
+<h3>按样本关联证据</h3>
+<p>用同一条样本记录关联原始素材、采用的对白、双轨音频及已有审核结果。管理系统定时扫描批次与音频清单。</p>
+<small>可在样本详情页追溯来源和处理过程</small>
+</div>
+<div class="pipe-stage">
+<h3>核对全量数据，记录准入状态</h3>
+<p>达到目标数量后还要汇总最终清单、与 benchmark 的对齐结果及待修正的问题。训练准入读取生产端的独立状态。</p>
+<small>目标 <span data-metric="goal">—</span> 段 · <span data-metric="admission">—</span>
+</small>
+</div>
+</section>
+</div>
+</main>
+<script src="catalog-api.js" defer></script>
+<script src="pipeline.js" defer></script>
+</body>
+</html>

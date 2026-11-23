@@ -71,31 +71,3 @@ function officialCase(r,matches,base){
   }).join('');
   return benchmarkFrame('cases','<a href="'+bench+'/cases?type='+r.scenario+'">'+label(r.scenario)+'案例列表</a><h2>'+label(r.scenario)+' #'+r.id.split('/')[1]+'</h2><p>'+focus[r.scenario]+'</p><section><div class="turn"><b>原始请求</b><p>'+esc(r.context)+'</p></div><div class="turn"><b>插入语音</b><p>'+esc(r.incoming)+'</p></div><p>事件发生在 <strong>'+r.start.toFixed(3)+'–'+r.end.toFixed(3)+' 秒</strong>，持续 '+(r.end-r.start).toFixed(3)+' 秒。</p></section><div class="columns">'+recordings.map(([file,title])=>'<section><h3>'+title+'</h3><audio controls preload="none" src="'+esc(aud+file+'.wav')+'"></audio></section>').join('')+'</div><h2>与此案例匹配的构建数据</h2>'+groups+'<a href="'+bench+'/samples?task='+r.scenario+'">浏览同类合成样本</a>');
 }
-
-function synthesisPipeline(s) {
-  const stage = (title, summary, output) =>
-    '<div class="pipe-stage"><h3>'+title+'</h3><p>'+summary+'</p><small>'+output+'</small></div>';
-  const fork = (left,right) => '<div class="pipe-fork">'+left+right+'</div>';
-  const group = (title,body) => '<section class="pipe-group"><h2>'+title+'</h2>'+body+'</section>';
-  const note = (title,body) => '<details class="pipe-note"><summary>'+title+'</summary><p>'+body+'</p></details>';
-  const plan = group('素材与目标',
-    fork(stage('已有语料','从中英文数据集选取问答、对话或真实环境声。保留数据集版本、原始记录和可用的来源标识。','例如 SODA、Magpie、COIG-CQIA、AVQA'),
-         stage('新构造的素材','按主题生成新的口语内容，或按规则构造有确定答案的数值任务。记录生成模型或构造规则。','例如 DeepSeek V4 Flash 生成的 FDB 素材'))+
-    stage('分配本批任务','把素材分配给普通对话、通用双工或 FDB 专项。按语言、话题、时长档和累计覆盖缺口规划样本。','每批 512 段文本')+
-    note('FDB 的四类目标如何进入写稿？','把用户打断、用户附和、对旁人讲话和背景语音作为场景条件，同时指定主任务、插入语音与预期话轮行为。官方案例用于设定目标与后续比对。'));
-  const author = group('对白生成与批次审核',
-    stage('写成可朗读的多轮对白','从来源素材扩写双方台词，安排双工事件插入哪一轮。记录插入前后的话、说话对象和助手接下来如何回应。','产物：对白脚本、交互事件和文本版本')+
-    fork(stage('独立文本审核','Qwen3.8-27B 检查整段对白，并审查事件与首个回应的语义。做话题标注、相似度检查和官方案例匹配。','覆盖报告区分已出现与整段审核通过'),
-         stage('分层音频抽检','从专项样本中按语言、时长档等条件选取对白，合成并对齐音频。用 Qwen ASR 与 FireRed ASR 回读，核对实际说出的内容。','两套 ASR 的结果仅适用于被检查的录音'))+
-    stage('汇总本批与累计覆盖','收集审核记录和抽检结果，更新整段审核结论、场景缺口与批次报告。闭批后调度批量语音生产。','已审阅文本：'+num(s.status.reviewed_texts)+' 段')+
-    note('覆盖不足或写稿失败时回到哪里？','写稿失败的任务可以重试或更换候选；可修复的问题进入返修。每批新增证据与此前批次合并，仍缺的场景用于调整后续批次的任务分配。'));
-  const audio = group('双轨音频合成',
-    fork(stage('普通对话与通用双工','读取当前采用的脚本，用标准语音合成流程渲染用户与助手音轨。','按脚本版本登记音频'),
-         stage('FDB 专项','逐句合成中文与英文语音，分别使用 CosyVoice 和 Kokoro。对齐后把插话叠进助手发言，组装双轨音频及事件对照。','记录事件起止采样点、助手停声与再开口位置'))+
-    stage('核对波形与时序','核对样本 ID、文本版本和音频哈希；从波形检查声道、时长及实测回复时延。专项事件还检查语音重叠和对照音频。','当前关联音频：'+num(s.audio)+' 段 · 回复时延目标 480 ms')+
-    note('音频有问题时怎样返修？','未生成的样本进入待处理清单。可修复的时序问题进入重合成与复核；登记采用的修订版本，再把它关联到对应文本。'));
-  const release = group('索引与训练准入',
-    stage('按样本关联证据','用同一条样本记录关联原始素材、采用的对白、双轨音频及已有审核结果。管理系统定时扫描批次与音频清单。','可在样本详情页追溯来源和处理过程')+
-    stage('核对全量数据，记录准入状态','达到目标数量后还要汇总最终清单、与 benchmark 的对齐结果及待修正的问题。训练准入读取生产端的独立状态。','目标 '+num(s.status.goal)+' 段 · '+(s.status.training_admitted?'已开放训练准入':'当前尚未开放训练准入')));
-  return '<a href="#overview">返回概览</a><h1>数据合成流程</h1><p class="muted">FullDuplexBench v1.5 · Stage 2 · 当前已审阅至第 '+num(s.status.last_review)+' 批</p><div class="pipe-map">'+plan+author+audio+release+'</div>';
-}

@@ -4,21 +4,11 @@ const num = x => Number(x).toLocaleString('zh-CN');
 const names = {pool:'数据池',task:'主要交互',topic:'话题',language:'语言',origin:'原始来源',batch:'批次',full_duplex_bench_v15:'Benchmark 专项',duplex:'通用双工',general:'普通对话',user_interruption:'用户打断',user_backchannel:'用户附和',talking_to_other:'对旁人讲话',background_speech:'背景语音',natural_dialogue:'自然对话',zh:'中文',en:'英文',constructed_fdb_content:'围绕评测目标生成',constructed_exact_numeric_GT:'构造精确数值素材'};
 const label = k => esc(names[k] || k);
 const refs = {topic:'话题','topic+topic_detail':'细分话题','overlap_topic+overlap_topic_detail':'重叠语音话题','scenario+topic+act':'场景 × 话题 × 行为','scenario+relation+overlap_act':'场景 × 关系 × 重叠行为','scenario+topic+topic_detail+act+relation+overlap_topic+overlap_topic_detail+overlap_act':'完整交互组合'};
-const locator='https://gist.githubusercontent.com/xjwxjw/7cf810ed0a298f32d029117e2f0842e5/raw/origin.json';
-let origin='', version=0;
-const local = location.hostname==='localhost'||location.hostname==='127.0.0.1'||location.hostname.endsWith('.trycloudflare.com');
-async function json(url){const r=await fetch(url,{signal:AbortSignal.timeout(20000)});if(!r.ok)throw Error('HTTP '+r.status);return r.json();}
-async function api(path){
-  if(!local && !origin){
-    try{origin=(await json(locator)).origin;}catch{origin='https://pork-activists-myspace-robot.trycloudflare.com';}
-    if(!/^https:\/\/[a-z0-9-]+\.trycloudflare\.com$/.test(origin))throw Error('数据源地址无效');
-  }
-  return json(origin+path);
-}
+let version=0;
 const link = (params,title) => '<a href="#benchmark/fdb15/samples?'+esc(new URLSearchParams(params))+'">'+title+'</a>';
 const card=(title,v,params)=>'<div class="card"><span>'+title+'</span><strong>'+(params?link(params,num(v)):esc(v))+'</strong></div>';
 function overview(s,records,all){
-  return '<h1>Benchmark 目录</h1><section class="entry"><div class="entry-heading"><h2>FullDuplexBench v1.5</h2><a class="button" href="#benchmark/fdb15/pipeline">数据合成流程</a></div><p>用有插话与无插话的两次测试，对照模型的停声、接话时机与回应内容。第 '+s.status.last_review+' 批已审阅</p>'+distributionChart(s,records,all,'#overview')+coverage(s)+'</section>';
+  return '<h1>Benchmark 目录</h1><section class="entry"><div class="entry-heading"><h2>FullDuplexBench v1.5</h2></div><p>用有插话与无插话的两次测试，对照模型的停声、接话时机与回应内容。第 '+s.status.last_review+' 批已审阅</p>'+distributionChart(s,records,all,'#overview')+coverage(s)+'</section>';
 }
 function coverage(s){
   const {bilingual,whole_review_clear:reviewed}=s.coverage;
@@ -56,6 +46,10 @@ function sample(d){
 async function render(){
   const current=++version;
   let [route,query]=location.hash.slice(1).split('?');
+  if(route==='benchmark/fdb15/pipeline'){
+    location.replace('pipeline.html');
+    return;
+  }
   if(route==='benchmark/fdb15' || route==='benchmark/fdb15/'){
     route='overview';
     history.replaceState(null,'','#overview'+(query?'?'+query:''));
@@ -68,7 +62,6 @@ async function render(){
     const all=new URLSearchParams(query).get('scope')==='all';
     if(!route||route==='overview')body=overview(s,await json('fdb15.json'),all);
     else if(section?.startsWith('sample/'))body=benchmarkFrame('samples',sample(await api('/api/sample/'+encodeURIComponent(section.slice(7)))));
-    else if(section==='pipeline')body=synthesisPipeline(s);
     else if(section==='samples')body=benchmarkFrame('samples',await samples(s,new URLSearchParams(query)));
     else if(section==='coverage')body=benchmarkFrame('coverage',coverage(s));
     else{
