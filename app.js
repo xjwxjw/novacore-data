@@ -18,12 +18,25 @@ async function api(path){
 const link = (params,title) => '<a href="#benchmark/fdb15/samples?'+esc(new URLSearchParams(params))+'">'+title+'</a>';
 const card=(title,v,params)=>'<div class="card"><span>'+title+'</span><strong>'+(params?link(params,num(v)):esc(v))+'</strong></div>';
 function overview(s,records,all){
-  return '<h1>Benchmark 目录</h1><section class="entry"><h2><a href="'+bench+'">FullDuplexBench v1.5</a></h2><p>全双工语音交互 · 第 '+s.status.last_review+' 批已审阅</p>'+distributionChart(s,records,all,'#overview')+'<div class="links"><a href="'+bench+'">进入 benchmark</a><a href="'+bench+'/cases">官方测试案例</a><a href="'+bench+'/samples">对应构建的数据</a><a href="'+bench+'/coverage">覆盖分析</a></div></section>';
+  return '<h1>Benchmark 目录</h1><section class="entry"><h2><a href="'+bench+'">FullDuplexBench v1.5</a></h2><p>全双工语音交互 · 第 '+s.status.last_review+' 批已审阅</p>'+distributionChart(s,records,all,'#overview')+coverage(s)+'</section>';
 }
 function coverage(s){
-  const groups=s.coverage.bilingual,clear=s.coverage.whole_review_clear;
-  let rows=Object.entries(groups).map(([k,v])=>'<tr><td>'+esc(refs[k]||k)+'</td><td>'+v.matched+' / '+v.reference+'</td><td>'+esc(clear[k]?.matched)+' / '+esc(clear[k]?.reference)+'</td><td>'+Math.round(v.matched/v.reference*100)+'%</td></tr>').join('');
-  return '<p>累计至第 '+s.status.last_review+' 批。分母为各维度的参考组合数，同一组合出现多次只计一次。</p>'+(s.cases?'<h2>官方案例匹配</h2><section><strong>'+num(s.cases.matched)+' / '+num(s.cases.total)+'</strong> 个官方案例与语言组合已找到匹配样本。第 '+s.cases.batch+' 批比对结果。</p><a href="#benchmark/fdb15/cases">查看案例、缺口与对应样本</a></section>':'')+'<h2>覆盖分析</h2><div class="panel"><table><tr><th>评测维度</th><th>双语覆盖</th><th>整段审核通过后覆盖</th><th>双语覆盖率</th></tr>'+rows+'</table></div>'+Object.entries(clear).filter(([,v])=>v.missing?.length).map(([k,v])=>details((refs[k]||k)+' · 审核后仍缺 '+v.missing.length+' 项',v.missing)).join('')+'<h2>按主要交互查看样本</h2><div class="links">'+s.facets.task.map(([k,v])=>link({task:k},label(k)+' · '+num(v))).join('')+'</div>';
+  const {bilingual,whole_review_clear:reviewed}=s.coverage;
+  function measure(record,kind,title){
+    if(!record || !record.reference)return '<span>暂无统计</span>';
+    const percent=100*record.matched/record.reference;
+    return '<div class="coverage-measure '+kind+'" aria-label="'+title+'"><span class="coverage-track" aria-hidden="true"><i style="width:'+percent+'%"></i></span><span>'+num(record.matched)+' / '+num(record.reference)+' <b>'+percent.toFixed(1)+'%</b></span></div>';
+  }
+  const axes=Object.entries(bilingual).sort(([a],[b])=>(reviewed[b]?.reference-reviewed[b]?.matched||0)-(reviewed[a]?.reference-reviewed[a]?.matched||0));
+  const rows=axes.map(([key,record])=>{
+    const audit=reviewed[key];
+    const gap=audit?audit.reference-audit.matched:null;
+    const gaps=audit?.missing?.length?'<details class="coverage-gaps"><summary>查看缺少的组合</summary><ul>'+audit.missing.map(item=>'<li>'+esc(item)+'</li>').join('')+'</ul></details>':'';
+    return '<div class="coverage-axis"><div><strong>'+esc(refs[key]||key)+'</strong><small>'+(gap===null?'暂无审核数据':gap?'审核后缺 '+num(gap)+' 项':'审核后已覆盖全部')+'</small></div><div>'+measure(record,'observed','双语覆盖')+measure(audit,'reviewed','整段审核通过后覆盖')+'</div>'+gaps+'</div>';
+  }).join('');
+  const cases=s.cases;
+  const summary=cases?.total?'<div class="coverage-cases"><div><strong>官方案例匹配</strong><small>第 '+num(cases.batch)+' 批 · 每个案例分别比对中、英文样本</small></div><div>'+measure({matched:cases.matched,reference:cases.total},'matched','已匹配的案例与语言组合')+'<small>尚有 '+num(cases.total-cases.matched)+' 个案例与语言组合未确认匹配</small></div></div>':'';
+  return '<section class="coverage-visual"><h2>覆盖分析</h2>'+summary+'<h3>评测维度覆盖</h3><div class="coverage-legend"><span>双语覆盖</span><span>整段审核通过后覆盖</span></div>'+rows+'<p class="coverage-caption">第 '+s.status.last_review+' 批 · 各维度按官方参考组合去重计数。</p></section>';
 }
 const details=(name,obj)=>'<details><summary>'+esc(name)+'</summary><pre>'+esc(JSON.stringify(obj,null,2))+'</pre></details>';
 async function samples(s,q){

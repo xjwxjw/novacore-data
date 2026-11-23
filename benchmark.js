@@ -7,7 +7,7 @@ const focus = {
   background_speech:'其他声音在背景中出现。观察助手能否在干扰下继续原回答。'
 };
 function benchmarkFrame(tab,body){
-  const tabs=[['','概览'],['cases','官方测试案例'],['samples','对应构建的数据'],['coverage','覆盖分析']];
+  const tabs=[['','概览'],['cases','官方测试案例'],['samples','对应构建的数据']];
   return '<a href="#overview">Benchmark 目录</a><h1>FullDuplexBench v1.5</h1><div class="bench-tabs">'+tabs.map(([key,title])=>'<a '+(tab===key?'aria-current="page" ':'')+'href="'+bench+(key?'/'+key:'')+'">'+title+'</a>').join('')+'</div>'+body;
 }
 function distributionChart(s, records, all, route) {
@@ -50,10 +50,7 @@ function distributionChart(s, records, all, route) {
     '</div><figcaption>第 '+s.status.last_review+' 批 · 点击任一侧的数量可查看对应数据。</figcaption></figure>';
 }
 function benchmarkHome(s,records,all){
-  return benchmarkFrame('',distributionChart(s,records,all,bench)+'<h2>评测重点</h2><p>同一个问题分别使用有插话与无插话的输入测试模型。比较两次输出，观察停声与接话时机，并判断插话后模型回应了什么。</p><div class="columns focus-cards">'+Object.entries(focus).map(([key,desc])=>{
-    const n=records.filter(r=>r.scenario===key).length;
-    return '<section><h3>'+label(key)+'</h3><p>'+desc+'</p><a href="'+bench+'/cases?type='+key+'">查看 '+n+' 个测试案例</a></section>';
-  }).join('')+'</div><h2>对应构建的数据</h2><div class="cards">'+s.facets.pool.map(([k,v])=>card(label(k),v,{pool:k})).join('')+'</div><p>第 '+s.status.last_review+' 批已审阅 · 规模目标 '+num(s.status.goal)+' 段 · 训练准入'+(s.status.training_admitted?'已开放':'未开放')+'</p><a href="'+bench+'/samples">浏览全部构建数据</a><p class="muted">数据与评测方法来自 Lin 等人发布的 <a href="'+releaseURL+'">Full-Duplex-Bench v1.5</a>。</p>');
+  return benchmarkFrame('','<p>用有插话与无插话的两次测试，对照模型的停声、接话时机与回应内容。</p>'+distributionChart(s,records,all,bench)+coverage(s)+'<p class="muted">已审阅 '+num(s.status.reviewed_texts)+' / '+num(s.status.goal)+' 段 · 训练准入'+(s.status.training_admitted?'已开放':'未开放')+'</p>');
 }
 function caseList(records,q){
   const type=q.get('type')||'',term=(q.get('q')||'').trim().toLowerCase();
