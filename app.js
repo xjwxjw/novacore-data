@@ -7,8 +7,31 @@ const refs = {topic:'话题','topic+topic_detail':'细分话题','overlap_topic+
 let version=0;
 const link = (params,title) => '<a href="#benchmark/fdb15/samples?'+esc(new URLSearchParams(params))+'">'+title+'</a>';
 const card=(title,v,params)=>'<div class="card"><span>'+title+'</span><strong>'+(params?link(params,num(v)):esc(v))+'</strong></div>';
+const overviewPreference = 'novacore.fdb15.overview.collapsed';
+let overviewCollapsed = false;
+try {
+  overviewCollapsed = localStorage.getItem(overviewPreference) === 'true';
+} catch {
+  // The toggle still works in memory when browser storage is unavailable.
+}
+
+app.addEventListener('click', event => {
+  const toggle = event.target.closest('button[aria-controls="fdb-overview-body"]');
+  if (!toggle) return;
+  const body = document.getElementById('fdb-overview-body');
+  overviewCollapsed = !body.hidden;
+  body.hidden = overviewCollapsed;
+  toggle.setAttribute('aria-expanded', String(!overviewCollapsed));
+  toggle.textContent = overviewCollapsed ? '展开' : '收起';
+  try {
+    localStorage.setItem(overviewPreference, String(overviewCollapsed));
+  } catch {
+    // Keep the current preference for this page.
+  }
+});
+
 function overview(s,records,all){
-  return '<h1>Benchmark 目录</h1><section class="entry"><div class="entry-heading"><h2>FullDuplexBench v1.5</h2></div><p>用有插话与无插话的两次测试，对照模型的停声、接话时机与回应内容。第 '+s.status.last_review+' 批已审阅</p><a class="button benchmark-pipeline" href="pipeline.html">查看数据合成流程</a>'+distributionChart(s,records,all,'#overview')+coverage(s)+'</section>';
+  return '<h1>Benchmark 目录</h1><section class="entry"><div class="entry-heading"><h2>FullDuplexBench v1.5</h2><button type="button" aria-controls="fdb-overview-body" aria-expanded="'+!overviewCollapsed+'">'+(overviewCollapsed?'展开':'收起')+'</button></div><div id="fdb-overview-body"'+(overviewCollapsed?' hidden':'')+'><p>用有插话与无插话的两次测试，对照模型的停声、接话时机与回应内容。第 '+s.status.last_review+' 批已审阅</p><a class="button benchmark-pipeline" href="pipeline.html">查看数据合成流程</a>'+distributionChart(s,records,all,'#overview')+coverage(s)+'</div></section>';
 }
 function coverage(s){
   const {bilingual,whole_review_clear:reviewed}=s.coverage;
