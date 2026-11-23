@@ -8,9 +8,9 @@ let version=0;
 const link = (params,title) => '<a href="#benchmark/fdb15/samples?'+esc(new URLSearchParams(params))+'">'+title+'</a>';
 const card=(title,v,params)=>'<div class="card"><span>'+title+'</span><strong>'+(params?link(params,num(v)):esc(v))+'</strong></div>';
 const overviewPreference = 'novacore.fdb15.overview.collapsed';
-let overviewCollapsed = false;
+let overviewCollapsed = true;
 try {
-  overviewCollapsed = localStorage.getItem(overviewPreference) === 'true';
+  overviewCollapsed = localStorage.getItem(overviewPreference) !== 'false';
 } catch {
   // The toggle still works in memory when browser storage is unavailable.
 }
