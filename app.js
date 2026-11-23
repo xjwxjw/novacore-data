@@ -17,8 +17,8 @@ async function api(path){
 }
 const link = (params,title) => '<a href="#benchmark/fdb15/samples?'+esc(new URLSearchParams(params))+'">'+title+'</a>';
 const card=(title,v,params)=>'<div class="card"><span>'+title+'</span><strong>'+(params?link(params,num(v)):esc(v))+'</strong></div>';
-function overview(s){
-  return '<h1>Benchmark 目录</h1><section class="entry"><h2><a href="'+bench+'">FullDuplexBench v1.5</a></h2><p>全双工语音交互 · 打断、附和、对旁人讲话与背景语音</p><p>498 个官方测试案例 · '+num(s.status.reviewed_texts)+' 段已审阅构建文本 · '+num(s.audio)+' 段已索引音频</p><a class="button" href="'+bench+'">进入 benchmark</a></section>';
+function overview(s,records,all){
+  return '<h1>Benchmark 目录</h1><section class="entry"><h2><a href="'+bench+'">FullDuplexBench v1.5</a></h2><p>全双工语音交互 · 第 '+s.status.last_review+' 批已审阅</p>'+distributionChart(s,records,all,'#overview')+'<div class="links"><a href="'+bench+'">进入 benchmark</a><a href="'+bench+'/cases">官方测试案例</a><a href="'+bench+'/samples">对应构建的数据</a><a href="'+bench+'/coverage">覆盖分析</a></div></section>';
 }
 function coverage(s){
   const groups=s.coverage.bilingual,clear=s.coverage.whole_review_clear;
@@ -48,7 +48,8 @@ async function render(){
     let body;
     const prefix='benchmark/fdb15';
     const section=route===prefix?'':route?.startsWith(prefix+'/')?route.slice(prefix.length+1):route;
-    if(!route||route==='overview')body=overview(s);
+    const all=new URLSearchParams(query).get('scope')==='all';
+    if(!route||route==='overview')body=overview(s,await json('fdb15.json'),all);
     else if(section?.startsWith('sample/'))body=benchmarkFrame('samples',sample(await api('/api/sample/'+encodeURIComponent(section.slice(7)))));
     else if(section==='samples')body=benchmarkFrame('samples',await samples(s,new URLSearchParams(query)));
     else if(section==='coverage')body=benchmarkFrame('coverage',coverage(s));
@@ -56,7 +57,7 @@ async function render(){
       const records=await json('fdb15.json');
       if(section==='cases')body=caseList(records,new URLSearchParams(query));
       else if(section?.startsWith('case/'))body=officialCase(records.find(r=>r.id===section.slice(5)),await api('/api/cases'),origin);
-      else body=benchmarkHome(s,records);
+      else body=benchmarkHome(s,records,all);
     }
     if(current!==version)return;
     app.innerHTML=body+'<footer>索引更新于 '+esc(s.updated)+' · 每 5 分钟同步</footer>';
@@ -65,4 +66,4 @@ async function render(){
 }
 document.addEventListener('submit',e=>{e.preventDefault();const q=new URLSearchParams();for(const [k,v] of new FormData(e.target))if(v)q.set(k,v);location.hash=(e.target.dataset.route||'benchmark/fdb15/samples')+'?'+q;});
 window.addEventListener('hashchange',()=>{window.scrollTo(0,0);render()});render();
-setInterval(()=>{if(!document.hidden&&['','#overview','#coverage'].includes(location.hash))render()},300000);
+setInterval(()=>{if(!document.hidden&&['','#overview',bench,bench+'/coverage','#coverage'].includes(location.hash.split('?')[0]))render()},300000);

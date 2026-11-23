@@ -10,8 +10,47 @@ function benchmarkFrame(tab,body){
   const tabs=[['','概览'],['cases','官方测试案例'],['samples','对应构建的数据'],['coverage','覆盖分析']];
   return '<a href="#overview">Benchmark 目录</a><h1>FullDuplexBench v1.5</h1><div class="bench-tabs">'+tabs.map(([key,title])=>'<a '+(tab===key?'aria-current="page" ':'')+'href="'+bench+(key?'/'+key:'')+'">'+title+'</a>').join('')+'</div>'+body;
 }
-function benchmarkHome(s,records){
-  return benchmarkFrame('','<h2>评测重点</h2><p>同一个问题分别使用有插话与无插话的输入测试模型。比较两次输出，观察停声与接话时机，并判断插话后模型回应了什么。</p><div class="columns focus-cards">'+Object.entries(focus).map(([key,desc])=>{
+function distributionChart(s, records, all, route) {
+  const pool = 'full_duplex_bench_v15';
+  const pools = Object.fromEntries(s.facets.pool);
+  const specialized = s.fdb_tasks;
+  const leftTotal = records.length;
+  const rightTotal = all ? s.status.reviewed_texts : pools[pool] || 0;
+  const rows = Object.keys(focus).map(key => ({
+    title: label(key),
+    left: records.filter(r => r.scenario === key).length,
+    right: specialized[key] || 0,
+    cases: bench+'/cases?type='+key,
+    samples: bench+'/samples?'+new URLSearchParams({pool, task:key})
+  }));
+  if (all) {
+    for (const [key,count] of s.facets.pool) {
+      if (key !== pool) rows.push({title:label(key), right:count, samples:bench+'/samples?pool='+encodeURIComponent(key)});
+    }
+  }
+  const percent = (count,total) => total ? (100*count/total).toFixed(1)+'%' : '—';
+  const root = (side,title,count,unit,url) =>
+    '<a class="flow-root '+side+'" href="'+url+'"><span>'+title+'</span><strong>'+num(count)+'</strong><small>'+unit+'</small></a>';
+  function branches(side,total) {
+    const height = rows.length*64;
+    const curves = rows.map((row,i)=>{
+      if(!row[side] || !total)return '';
+      const y = 32+64*i;
+      const weight = 1.5+17*row[side]/total;
+      return '<path d="M 0 '+height/2+' C 45 '+height/2+' 55 '+y+' 100 '+y+'" stroke-width="'+weight+'"/>';
+    }).join('');
+    return '<svg class="flow-branches '+side+'" viewBox="0 0 100 '+height+'" preserveAspectRatio="none" aria-hidden="true"><g '+(side==='right'?'transform="translate(100 0) scale(-1 1)"':'')+'>'+curves+'</g></svg>';
+  }
+  const metric = (count,total,url,side,title) => '<a class="flow-value '+side+'" href="'+esc(url)+'" aria-label="'+title+'，'+num(count)+'，占 '+percent(count,total)+'"><strong>'+percent(count,total)+'</strong><small>'+num(count)+(side==='left'?' 个案例':' 段文本')+'</small></a>';
+  const lines = rows.map(row=>'<div class="flow-row">'+(row.left===undefined?'<span class="flow-na" aria-label="无对应官方类别">—</span>':metric(row.left,leftTotal,row.cases,'left',row.title+'官方案例'))+'<b>'+row.title+'</b>'+metric(row.right,rightTotal,row.samples,'right',row.title+'合成数据')+'</div>').join('');
+  const rightUrl = bench+'/samples'+(all?'':'?pool='+pool);
+  const toggle = (value,title) => '<a href="'+route+(value?'?scope=all':'')+'" '+(value===all?'aria-current="true"':'')+'>'+title+'</a>';
+  return '<figure class="distribution"><div class="flow-heading"><h2>案例类型分布</h2><div class="flow-toggle" aria-label="合成数据范围">'+toggle(false,'FDB 专项')+toggle(true,'全部合成')+'</div></div><p class="flow-note">左侧按官方案例计数，右侧按已审阅文本的主要交互类型计数。各侧占比以各自总数为分母。</p><div class="flow-chart">'+
+    root('left','Benchmark',leftTotal,'官方测试案例',bench+'/cases')+branches('left',leftTotal)+'<div class="flow-rows">'+lines+'</div>'+branches('right',rightTotal)+root('right','合成数据',rightTotal,all?'全部已审阅文本':'FDB 专项文本',rightUrl)+
+    '</div><figcaption>第 '+s.status.last_review+' 批 · 点击任一侧的数量可查看对应数据。</figcaption></figure>';
+}
+function benchmarkHome(s,records,all){
+  return benchmarkFrame('',distributionChart(s,records,all,bench)+'<h2>评测重点</h2><p>同一个问题分别使用有插话与无插话的输入测试模型。比较两次输出，观察停声与接话时机，并判断插话后模型回应了什么。</p><div class="columns focus-cards">'+Object.entries(focus).map(([key,desc])=>{
     const n=records.filter(r=>r.scenario===key).length;
     return '<section><h3>'+label(key)+'</h3><p>'+desc+'</p><a href="'+bench+'/cases?type='+key+'">查看 '+n+' 个测试案例</a></section>';
   }).join('')+'</div><h2>对应构建的数据</h2><div class="cards">'+s.facets.pool.map(([k,v])=>card(label(k),v,{pool:k})).join('')+'</div><p>第 '+s.status.last_review+' 批已审阅 · 规模目标 '+num(s.status.goal)+' 段 · 训练准入'+(s.status.training_admitted?'已开放':'未开放')+'</p><a href="'+bench+'/samples">浏览全部构建数据</a><p class="muted">数据与评测方法来自 Lin 等人发布的 <a href="'+releaseURL+'">Full-Duplex-Bench v1.5</a>。</p>');
