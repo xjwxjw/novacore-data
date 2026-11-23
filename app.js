@@ -24,7 +24,7 @@ function overview(s){
 function coverage(s){
   const groups=s.coverage.bilingual,clear=s.coverage.whole_review_clear;
   let rows=Object.entries(groups).map(([k,v])=>'<tr><td>'+esc(refs[k]||k)+'</td><td>'+v.matched+' / '+v.reference+'</td><td>'+esc(clear[k]?.matched)+' / '+esc(clear[k]?.reference)+'</td><td>'+Math.round(v.matched/v.reference*100)+'%</td></tr>').join('');
-  return '<h1>FullDuplexBench v1.5</h1><p>累计至第 '+s.status.last_review+' 批。分母为各维度的参考组合数，同一组合出现多次只计一次。</p><h2>覆盖分析</h2><div class="panel"><table><tr><th>评测维度</th><th>双语覆盖</th><th>整段审核通过后覆盖</th><th>双语覆盖率</th></tr>'+rows+'</table></div>'+Object.entries(clear).filter(([,v])=>v.missing?.length).map(([k,v])=>details((refs[k]||k)+' · 审核后仍缺 '+v.missing.length+' 项',v.missing)).join('')+'<h2>按主要交互查看样本</h2><div class="links">'+s.facets.task.map(([k,v])=>link({task:k},label(k)+' · '+num(v))).join('')+'</div>';
+  return '<h1>FullDuplexBench v1.5</h1><p>累计至第 '+s.status.last_review+' 批。分母为各维度的参考组合数，同一组合出现多次只计一次。</p>'+(s.cases?'<h2>官方案例匹配</h2><section><strong>'+num(s.cases.matched)+' / '+num(s.cases.total)+'</strong> 个官方案例与语言组合已找到匹配样本。第 '+s.cases.batch+' 批比对结果。</p><a href="#cases">查看案例、缺口与对应样本</a></section>':'')+'<h2>覆盖分析</h2><div class="panel"><table><tr><th>评测维度</th><th>双语覆盖</th><th>整段审核通过后覆盖</th><th>双语覆盖率</th></tr>'+rows+'</table></div>'+Object.entries(clear).filter(([,v])=>v.missing?.length).map(([k,v])=>details((refs[k]||k)+' · 审核后仍缺 '+v.missing.length+' 项',v.missing)).join('')+'<h2>按主要交互查看样本</h2><div class="links">'+s.facets.task.map(([k,v])=>link({task:k},label(k)+' · '+num(v))).join('')+'</div>';
 }
 const details=(name,obj)=>'<details><summary>'+esc(name)+'</summary><pre>'+esc(JSON.stringify(obj,null,2))+'</pre></details>';
 async function samples(s,q){
@@ -48,7 +48,11 @@ async function render(){
     const s=await api('/api/summary');
     let body;
     if(route?.startsWith('sample/'))body=sample(await api('/api/sample/'+encodeURIComponent(route.slice(7))));
-    else if(route==='samples')body=await samples(s,new URLSearchParams(query));
+    else if(route==='cases'){
+      const cases=await api('/api/cases');
+      const tbody=cases.map(([lang,ref,events])=>'<tr><td>'+esc(ref)+'</td><td>'+label(lang)+'</td><td>'+(events.length?events.map(id=>link({q:id.split('/')[0]},esc(id))).join('<br>'):'暂无匹配')+'</td></tr>').join('');
+      body='<a href="#coverage">覆盖分析</a><h1>官方案例与样本</h1><div class="panel"><table><tr><th>官方案例</th><th>语言</th><th>匹配的样本与轮次</th></tr>'+tbody+'</table></div>';
+    }else if(route==='samples')body=await samples(s,new URLSearchParams(query));
     else body=route==='coverage'?coverage(s):overview(s);
     if(current!==version)return;
     app.innerHTML=body+'<footer>索引更新于 '+esc(s.updated)+' · 每 5 分钟同步</footer>';
