@@ -1,0 +1,3986 @@
+[
+ {
+  "id": "user_interruption/1",
+  "scenario": "user_interruption",
+  "context": "How can I save money more effectively?",
+  "incoming": "Actually, what are some financial goals I should set?",
+  "start": 6.613,
+  "end": 9.568
+ },
+ {
+  "id": "user_interruption/2",
+  "scenario": "user_interruption",
+  "context": "What are the latest trends in smartphones?",
+  "incoming": "Let's switch to talking about laptops.",
+  "start": 6.443,
+  "end": 8.182
+ },
+ {
+  "id": "user_interruption/3",
+  "scenario": "user_interruption",
+  "context": "What's the latest in smart home devices?",
+  "incoming": "Hold on, what time is the meeting scheduled today?",
+  "start": 6.251,
+  "end": 9.12
+ },
+ {
+  "id": "user_interruption/4",
+  "scenario": "user_interruption",
+  "context": "How should I take care of indoor plants?",
+  "incoming": "By the way, what’s the weather going to be like tomorrow?",
+  "start": 6.528,
+  "end": 9.888
+ },
+ {
+  "id": "user_interruption/5",
+  "scenario": "user_interruption",
+  "context": "What are the benefits of eating more fruits?",
+  "incoming": "Can we talk about something else?",
+  "start": 6.997,
+  "end": 8.8
+ },
+ {
+  "id": "user_interruption/6",
+  "scenario": "user_interruption",
+  "context": "Which places do you recommend visiting in Europe?",
+  "incoming": "Oh, before I forget, do I need a visa to travel to Europe?",
+  "start": 6.528,
+  "end": 10.763
+ },
+ {
+  "id": "user_interruption/7",
+  "scenario": "user_interruption",
+  "context": "How often should I run to stay fit?",
+  "incoming": "Oh, by the way, can you tell me about some good running shoes?",
+  "start": 6.379,
+  "end": 10.678
+ },
+ {
+  "id": "user_interruption/8",
+  "scenario": "user_interruption",
+  "context": "What’s a good comedy to watch?",
+  "incoming": "Actually, what are the new movies released?",
+  "start": 5.952,
+  "end": 7.989
+ },
+ {
+  "id": "user_interruption/9",
+  "scenario": "user_interruption",
+  "context": "What makes a good smartphone camera?",
+  "incoming": "By the way, what's the price of the latest model?",
+  "start": 6.379,
+  "end": 10.038
+ },
+ {
+  "id": "user_interruption/10",
+  "scenario": "user_interruption",
+  "context": "How can I reduce stress quickly?",
+  "incoming": "Can we switch to talking about sleep improvement?",
+  "start": 6.229,
+  "end": 8.97
+ },
+ {
+  "id": "user_interruption/11",
+  "scenario": "user_interruption",
+  "context": "I'm thinking of buying a new laptop",
+  "incoming": "Hold that thought. Can we discuss cooking tips instead?",
+  "start": 6.251,
+  "end": 9.632
+ },
+ {
+  "id": "user_interruption/12",
+  "scenario": "user_interruption",
+  "context": "What should I feed my dog?",
+  "incoming": "Oh, before I forget, how often should I take my dog to the vet?",
+  "start": 5.44,
+  "end": 9.525
+ },
+ {
+  "id": "user_interruption/13",
+  "scenario": "user_interruption",
+  "context": "What’s the easiest instrument to start learning?",
+  "incoming": "Actually, could you suggest some music schools?",
+  "start": 6.229,
+  "end": 8.693
+ },
+ {
+  "id": "user_interruption/14",
+  "scenario": "user_interruption",
+  "context": "Why is recycling important?",
+  "incoming": "Can we talk about something else?",
+  "start": 5.397,
+  "end": 7.114
+ },
+ {
+  "id": "user_interruption/15",
+  "scenario": "user_interruption",
+  "context": "Can you suggest a good mystery novel?",
+  "incoming": "Can we talk about something else? What about movies?",
+  "start": 6.571,
+  "end": 9.654
+ },
+ {
+  "id": "user_interruption/16",
+  "scenario": "user_interruption",
+  "context": "Could you give me some ideas for dinner tonight?",
+  "incoming": "Oh, before I forget, do we need more coffee?",
+  "start": 7.104,
+  "end": 10.08
+ },
+ {
+  "id": "user_interruption/17",
+  "scenario": "user_interruption",
+  "context": "What's the weather going to be like this weekend?",
+  "incoming": "Can we talk about something else? How about any good movies out?",
+  "start": 7.211,
+  "end": 11.104
+ },
+ {
+  "id": "user_interruption/18",
+  "scenario": "user_interruption",
+  "context": "How often should I water my succulents?",
+  "incoming": "By the way, have we set up a dinner plan for tonight?",
+  "start": 6.485,
+  "end": 9.802
+ },
+ {
+  "id": "user_interruption/19",
+  "scenario": "user_interruption",
+  "context": "What are some essential things to pack for a tropical vacation?",
+  "incoming": "Oh, do I need a visa for my trip next month?",
+  "start": 8.811,
+  "end": 12.47
+ },
+ {
+  "id": "user_interruption/20",
+  "scenario": "user_interruption",
+  "context": "I'm looking for a new mystery novel to read, any suggestions?",
+  "incoming": "Actually, wait, what's the weather tomorrow?",
+  "start": 8.043,
+  "end": 10.23
+ },
+ {
+  "id": "user_interruption/21",
+  "scenario": "user_interruption",
+  "context": "How often should I exercise each week to stay healthy?",
+  "incoming": "Oh, what time is my doctor's appointment next Thursday?",
+  "start": 7.552,
+  "end": 10.869
+ },
+ {
+  "id": "user_interruption/22",
+  "scenario": "user_interruption",
+  "context": "Maybe I should get a dog",
+  "incoming": "Actually, can we discuss career advice instead?",
+  "start": 6.08,
+  "end": 8.565
+ },
+ {
+  "id": "user_interruption/23",
+  "scenario": "user_interruption",
+  "context": "Tell me something interesting about ancient Rome",
+  "incoming": "Wait, can you help me with something else? I need recipe ideas for a birthday cake.",
+  "start": 6.571,
+  "end": 11.702
+ },
+ {
+  "id": "user_interruption/24",
+  "scenario": "user_interruption",
+  "context": "What are some ways to reduce plastic use at home?",
+  "incoming": "Actually, what are some good documentaries on this topic?",
+  "start": 7.595,
+  "end": 10.358
+ },
+ {
+  "id": "user_interruption/25",
+  "scenario": "user_interruption",
+  "context": "What's the latest in smartphone tech?",
+  "incoming": "Before we continue, did I reply to Mike's email yesterday?",
+  "start": 6.293,
+  "end": 9.738
+ },
+ {
+  "id": "user_interruption/26",
+  "scenario": "user_interruption",
+  "context": "How can I save more money each month?",
+  "incoming": "Hold on, could you recommend some budgeting apps?",
+  "start": 6.208,
+  "end": 8.629
+ },
+ {
+  "id": "user_interruption/27",
+  "scenario": "user_interruption",
+  "context": "How do I start a vegetable garden?",
+  "incoming": "Oh, before I forget, how do I deal with pests naturally?",
+  "start": 5.952,
+  "end": 9.568
+ },
+ {
+  "id": "user_interruption/28",
+  "scenario": "user_interruption",
+  "context": "I'm looking for a good movie to watch tonight",
+  "incoming": "Oh, before I forget, do you have any good dessert recipes?",
+  "start": 6.976,
+  "end": 10.677
+ },
+ {
+  "id": "user_interruption/29",
+  "scenario": "user_interruption",
+  "context": "I want to plan a trip for the upcoming holiday",
+  "incoming": "Can we talk about something else? I need some book recommendations.",
+  "start": 7.189,
+  "end": 10.613
+ },
+ {
+  "id": "user_interruption/30",
+  "scenario": "user_interruption",
+  "context": "My tomatoes are not growing well this season",
+  "incoming": "By the way, what's the weather going to be like tomorrow?",
+  "start": 6.805,
+  "end": 10.25
+ },
+ {
+  "id": "user_interruption/31",
+  "scenario": "user_interruption",
+  "context": "I'm trying to eat healthier these days",
+  "incoming": "Actually, can we switch to discussing exercise routines?",
+  "start": 6.464,
+  "end": 9.824
+ },
+ {
+  "id": "user_interruption/32",
+  "scenario": "user_interruption",
+  "context": "I heard there's a new phone model coming out soon",
+  "incoming": "Hold that thought, what were the top songs this year?",
+  "start": 7.424,
+  "end": 10.699
+ },
+ {
+  "id": "user_interruption/33",
+  "scenario": "user_interruption",
+  "context": "I need to get back to working out",
+  "incoming": "By the way, what are your thoughts on meditation?",
+  "start": 6.613,
+  "end": 9.589
+ },
+ {
+  "id": "user_interruption/34",
+  "scenario": "user_interruption",
+  "context": "I'm thinking about getting a new dog",
+  "incoming": "Oh, before I forget, any tips on indoor plant care?",
+  "start": 6.784,
+  "end": 10.251
+ },
+ {
+  "id": "user_interruption/35",
+  "scenario": "user_interruption",
+  "context": "Could you tell me the rules of tennis?",
+  "incoming": "By the way, what's new in the film industry?",
+  "start": 6.507,
+  "end": 9.568
+ },
+ {
+  "id": "user_interruption/36",
+  "scenario": "user_interruption",
+  "context": "What's the difference between modern and contemporary art?",
+  "incoming": "Hold on, can you suggest some easy dinner ideas instead?",
+  "start": 7.061,
+  "end": 10.378
+ },
+ {
+  "id": "user_interruption/37",
+  "scenario": "user_interruption",
+  "context": "What's popular in fitness these days?",
+  "incoming": "Wait, remind me, when's daylight saving time starting?",
+  "start": 5.803,
+  "end": 8.63
+ },
+ {
+  "id": "user_interruption/38",
+  "scenario": "user_interruption",
+  "context": "How can I start saving more money?",
+  "incoming": "Actually, can we talk about the latest TV shows?",
+  "start": 6.293,
+  "end": 9.546
+ },
+ {
+  "id": "user_interruption/39",
+  "scenario": "user_interruption",
+  "context": "Is morning the best time to exercise?",
+  "incoming": "Actually, could we switch to diet tips instead?",
+  "start": 6.08,
+  "end": 8.736
+ },
+ {
+  "id": "user_interruption/40",
+  "scenario": "user_interruption",
+  "context": "I'm not sure whether to travel by plane or train",
+  "incoming": "Actually, can we talk about something else?",
+  "start": 7.253,
+  "end": 9.354
+ },
+ {
+  "id": "user_interruption/41",
+  "scenario": "user_interruption",
+  "context": "I haven't watched a good movie in ages",
+  "incoming": "By the way, did you know I started learning guitar?",
+  "start": 6.485,
+  "end": 9.61
+ },
+ {
+  "id": "user_interruption/42",
+  "scenario": "user_interruption",
+  "context": "I've been thinking about starting a diet",
+  "incoming": "Oh, before I forget, I signed up for a marathon.",
+  "start": 6.016,
+  "end": 9.141
+ },
+ {
+  "id": "user_interruption/43",
+  "scenario": "user_interruption",
+  "context": "I feel like I'm always behind on the latest tech",
+  "incoming": "Can we talk about something else?",
+  "start": 7.36,
+  "end": 9.205
+ },
+ {
+  "id": "user_interruption/44",
+  "scenario": "user_interruption",
+  "context": "I’m interested in taking up photography",
+  "incoming": "Hold on, can we switch to talking about the benefits of journaling?",
+  "start": 5.909,
+  "end": 10.101
+ },
+ {
+  "id": "user_interruption/45",
+  "scenario": "user_interruption",
+  "context": "I need a new book to dive into",
+  "incoming": "Actually, let's talk about your thoughts on art.",
+  "start": 6.528,
+  "end": 9.12
+ },
+ {
+  "id": "user_interruption/46",
+  "scenario": "user_interruption",
+  "context": "I'm trying to improve my cooking skills",
+  "incoming": "Oh, before I forget, did I tell you I'm hosting a party?",
+  "start": 6.443,
+  "end": 10.208
+ },
+ {
+  "id": "user_interruption/47",
+  "scenario": "user_interruption",
+  "context": "I've been bored with my current exercise routine",
+  "incoming": "By the way, I just got a new pet!",
+  "start": 6.869,
+  "end": 9.866
+ },
+ {
+  "id": "user_interruption/48",
+  "scenario": "user_interruption",
+  "context": "I've been reading about climate change lately",
+  "incoming": "Can we talk about something else?",
+  "start": 6.357,
+  "end": 8.33
+ },
+ {
+  "id": "user_interruption/49",
+  "scenario": "user_interruption",
+  "context": "I'm considering changing my career path",
+  "incoming": "Oh, before I forget, let's switch to talking about holiday plans.",
+  "start": 5.824,
+  "end": 9.739
+ },
+ {
+  "id": "user_interruption/50",
+  "scenario": "user_interruption",
+  "context": "I want to start a garden, but I don’t know where to begin",
+  "incoming": "Actually, let's talk about weekend plans.",
+  "start": 8.064,
+  "end": 10.123
+ },
+ {
+  "id": "user_interruption/51",
+  "scenario": "user_interruption",
+  "context": "How do antivirus programs work?",
+  "incoming": "I got it, but can you tell me about cloud storage now?",
+  "start": 5.781,
+  "end": 9.632
+ },
+ {
+  "id": "user_interruption/52",
+  "scenario": "user_interruption",
+  "context": "What kind of movies do you think I would like?",
+  "incoming": "Oh, before I forget, can we discuss some music instead?",
+  "start": 6.912,
+  "end": 10.421
+ },
+ {
+  "id": "user_interruption/53",
+  "scenario": "user_interruption",
+  "context": "Can you suggest some cold-weather destinations?",
+  "incoming": "Can we talk about something else?",
+  "start": 6.763,
+  "end": 8.63
+ },
+ {
+  "id": "user_interruption/54",
+  "scenario": "user_interruption",
+  "context": "I need some advice on eating healthier",
+  "incoming": "Actually, can we discuss exercise routines instead?",
+  "start": 6.485,
+  "end": 8.778
+ },
+ {
+  "id": "user_interruption/55",
+  "scenario": "user_interruption",
+  "context": "I want to watch something exciting tonight",
+  "incoming": "Can we talk about something else?",
+  "start": 6.592,
+  "end": 8.715
+ },
+ {
+  "id": "user_interruption/56",
+  "scenario": "user_interruption",
+  "context": "What's a good book to read that's set in historical times?",
+  "incoming": "Oh, by the way, can you also suggest some podcasts?",
+  "start": 7.787,
+  "end": 11.168
+ },
+ {
+  "id": "user_interruption/57",
+  "scenario": "user_interruption",
+  "context": "How do I take care of orchids?",
+  "incoming": "Actually, let's switch to indoor plants, what do you recommend?",
+  "start": 5.824,
+  "end": 9.291
+ },
+ {
+  "id": "user_interruption/58",
+  "scenario": "user_interruption",
+  "context": "What are the latest trends in tech?",
+  "incoming": "Oh, before I forget, what about the latest phones?",
+  "start": 6.336,
+  "end": 9.483
+ },
+ {
+  "id": "user_interruption/59",
+  "scenario": "user_interruption",
+  "context": "How can I impress in my new job?",
+  "incoming": "By the way, can I get some tips on public speaking?",
+  "start": 6.613,
+  "end": 10.08
+ },
+ {
+  "id": "user_interruption/60",
+  "scenario": "user_interruption",
+  "context": "What are some classic sci-fi movies?",
+  "incoming": "Actually, let's talk about recent releases. Got any recommendations?",
+  "start": 6.251,
+  "end": 9.803
+ },
+ {
+  "id": "user_interruption/61",
+  "scenario": "user_interruption",
+  "context": "How can I participate in environmental conservation from home?",
+  "incoming": "Actually, what are some good environmental documentaries?",
+  "start": 7.189,
+  "end": 9.824
+ },
+ {
+  "id": "user_interruption/62",
+  "scenario": "user_interruption",
+  "context": "What's a good coffee blend for cold brew?",
+  "incoming": "Oh, before I forget, can you help me with espresso techniques?",
+  "start": 6.763,
+  "end": 10.656
+ },
+ {
+  "id": "user_interruption/63",
+  "scenario": "user_interruption",
+  "context": "What makes a film great?",
+  "incoming": "By the way, what recent films do you recommend?",
+  "start": 5.888,
+  "end": 8.672
+ },
+ {
+  "id": "user_interruption/64",
+  "scenario": "user_interruption",
+  "context": "How do I keep pasta from sticking while cooking?",
+  "incoming": "Can we talk about something else?",
+  "start": 7.147,
+  "end": 9.035
+ },
+ {
+  "id": "user_interruption/65",
+  "scenario": "user_interruption",
+  "context": "What's the best time of year to go to the beach?",
+  "incoming": "Oh, before I forget, can you tell me about hiking spots?",
+  "start": 7.381,
+  "end": 11.445
+ },
+ {
+  "id": "user_interruption/66",
+  "scenario": "user_interruption",
+  "context": "Can you tell me how to take care of indoor plants?",
+  "incoming": "Oh, before I forget, can we switch to discussing outdoor gardening?",
+  "start": 7.467,
+  "end": 11.126
+ },
+ {
+  "id": "user_interruption/67",
+  "scenario": "user_interruption",
+  "context": "Are there any good comedies out right now?",
+  "incoming": "By the way, do you have any thriller suggestions instead?",
+  "start": 6.592,
+  "end": 10.421
+ },
+ {
+  "id": "user_interruption/68",
+  "scenario": "user_interruption",
+  "context": "What are the latest advancements in smartphone technology?",
+  "incoming": "Oh, actually, let's switch to discussing smart home devices instead.",
+  "start": 7.019,
+  "end": 10.336
+ },
+ {
+  "id": "user_interruption/69",
+  "scenario": "user_interruption",
+  "context": "What's a good beginner workout routine?",
+  "incoming": "Can we talk about something else?",
+  "start": 6.165,
+  "end": 8.245
+ },
+ {
+  "id": "user_interruption/70",
+  "scenario": "user_interruption",
+  "context": "What kinds of books do you think I would like?",
+  "incoming": "Actually, could we discuss recent award-winning books?",
+  "start": 6.72,
+  "end": 9.419
+ },
+ {
+  "id": "user_interruption/71",
+  "scenario": "user_interruption",
+  "context": "How can I reduce plastic use in my daily life?",
+  "incoming": "Oh, before I forget, what are some ways to save water at home?",
+  "start": 7.104,
+  "end": 11.083
+ },
+ {
+  "id": "user_interruption/72",
+  "scenario": "user_interruption",
+  "context": "Can you tell me about the industrial revolution?",
+  "incoming": "By the way, let's switch the topic to ancient civilizations.",
+  "start": 6.272,
+  "end": 9.568
+ },
+ {
+  "id": "user_interruption/73",
+  "scenario": "user_interruption",
+  "context": "How should I start saving for retirement?",
+  "incoming": "Oh, before I forget, could we talk about investment options?",
+  "start": 6.4,
+  "end": 9.824
+ },
+ {
+  "id": "user_interruption/74",
+  "scenario": "user_interruption",
+  "context": "What are the newest missions to space?",
+  "incoming": "Actually, can you tell me about the technology used in space stations instead?",
+  "start": 6.464,
+  "end": 10.869
+ },
+ {
+  "id": "user_interruption/75",
+  "scenario": "user_interruption",
+  "context": "What are some ways to reduce stress?",
+  "incoming": "Can we talk about improving sleep instead?",
+  "start": 6.485,
+  "end": 9.653
+ },
+ {
+  "id": "user_interruption/76",
+  "scenario": "user_interruption",
+  "context": "I was thinking about going somewhere warm this winter",
+  "incoming": "By the way, did I tell you about the new movie coming out this week?",
+  "start": 7.317,
+  "end": 11.466
+ },
+ {
+  "id": "user_interruption/77",
+  "scenario": "user_interruption",
+  "context": "What are some benefits of eating fruits and vegetables?",
+  "incoming": "By the way, how about we discuss exercise routines instead?",
+  "start": 7.296,
+  "end": 10.976
+ },
+ {
+  "id": "user_interruption/78",
+  "scenario": "user_interruption",
+  "context": "I've started this new plant-based diet recently",
+  "incoming": "Oh, before I forget, can you help me plan a birthday party?",
+  "start": 7.061,
+  "end": 10.933
+ },
+ {
+  "id": "user_interruption/79",
+  "scenario": "user_interruption",
+  "context": "I've been thinking about joining a gym",
+  "incoming": "Can we talk about something else? How about any good books lately?",
+  "start": 6.357,
+  "end": 10.336
+ },
+ {
+  "id": "user_interruption/80",
+  "scenario": "user_interruption",
+  "context": "I'm considering buying a new laptop soon",
+  "incoming": "Actually, let's switch gears. Have you seen any good TV shows recently?",
+  "start": 5.995,
+  "end": 9.974
+ },
+ {
+  "id": "user_interruption/81",
+  "scenario": "user_interruption",
+  "context": "I'm not sure what to do this coming weekend",
+  "incoming": "Oh, before I forget, can we plan our upcoming meeting agenda?",
+  "start": 7.125,
+  "end": 10.933
+ },
+ {
+  "id": "user_interruption/82",
+  "scenario": "user_interruption",
+  "context": "I've been trying to improve my Spanish",
+  "incoming": "Can we talk about something else? How about your thoughts on home gardening?",
+  "start": 6.485,
+  "end": 10.869
+ },
+ {
+  "id": "user_interruption/83",
+  "scenario": "user_interruption",
+  "context": "I'm thinking about changing my career path",
+  "incoming": "By the way, have you tried any new recipes lately?",
+  "start": 6.443,
+  "end": 9.782
+ },
+ {
+  "id": "user_interruption/84",
+  "scenario": "user_interruption",
+  "context": "I've been worried about the impact of pollution lately",
+  "incoming": "Actually, let's talk about something more upbeat. What's the latest on space exploration?",
+  "start": 7.339,
+  "end": 12.086
+ },
+ {
+  "id": "user_interruption/85",
+  "scenario": "user_interruption",
+  "context": "I’m starting to plan for retirement",
+  "incoming": "Oh, before I forget, did you hear about the downtown art festival?",
+  "start": 5.653,
+  "end": 9.61
+ },
+ {
+  "id": "user_interruption/86",
+  "scenario": "user_interruption",
+  "context": "I need to eat healthier meals",
+  "incoming": "By the way, what do you think about electric cars?",
+  "start": 5.909,
+  "end": 9.589
+ },
+ {
+  "id": "user_interruption/87",
+  "scenario": "user_interruption",
+  "context": "How can I improve my time management skills?",
+  "incoming": "Actually, do you have tips for maintaining motivation?",
+  "start": 6.656,
+  "end": 9.205
+ },
+ {
+  "id": "user_interruption/88",
+  "scenario": "user_interruption",
+  "context": "How do I choose a good travel destination?",
+  "incoming": "Can we talk about something else? How do you plan a road trip?",
+  "start": 6.592,
+  "end": 10.656
+ },
+ {
+  "id": "user_interruption/89",
+  "scenario": "user_interruption",
+  "context": "How do I make sure my pasta doesn't stick while cooking?",
+  "incoming": "Oh, before I forget, did we decide what time to start dinner tomorrow?",
+  "start": 7.403,
+  "end": 11.36
+ },
+ {
+  "id": "user_interruption/90",
+  "scenario": "user_interruption",
+  "context": "What should I plant in a shaded area of my garden?",
+  "incoming": "By the way, how often should I water my indoor plants?",
+  "start": 7.552,
+  "end": 11.189
+ },
+ {
+  "id": "user_interruption/91",
+  "scenario": "user_interruption",
+  "context": "What should we do this weekend if it's raining?",
+  "incoming": "Can we talk about something else?",
+  "start": 6.848,
+  "end": 8.8
+ },
+ {
+  "id": "user_interruption/92",
+  "scenario": "user_interruption",
+  "context": "How often should I change the oil in my car?",
+  "incoming": "Oh, before I forget, can you remind me to call the mechanic tomorrow?",
+  "start": 7.275,
+  "end": 11.744
+ },
+ {
+  "id": "user_interruption/93",
+  "scenario": "user_interruption",
+  "context": "What are some healthy snacks I can eat during work?",
+  "incoming": "By the way, what's for dinner tonight?",
+  "start": 7.573,
+  "end": 10.229
+ },
+ {
+  "id": "user_interruption/94",
+  "scenario": "user_interruption",
+  "context": "What are the new features in the latest software update?",
+  "incoming": "Can we talk about something else?",
+  "start": 7.061,
+  "end": 8.906
+ },
+ {
+  "id": "user_interruption/95",
+  "scenario": "user_interruption",
+  "context": "Which destinations are popular for a winter vacation?",
+  "incoming": "Oh, before I forget, did we book the hotels for the trip?",
+  "start": 6.784,
+  "end": 10.571
+ },
+ {
+  "id": "user_interruption/96",
+  "scenario": "user_interruption",
+  "context": "How do I improve my concentration while studying?",
+  "incoming": "By the way, when is the library closing today?",
+  "start": 7.296,
+  "end": 10.016
+ },
+ {
+  "id": "user_interruption/97",
+  "scenario": "user_interruption",
+  "context": "What are basic steps for grooming a dog?",
+  "incoming": "Can we talk about something else?",
+  "start": 6.336,
+  "end": 8.352
+ },
+ {
+  "id": "user_interruption/98",
+  "scenario": "user_interruption",
+  "context": "What kind of music is good for a workout?",
+  "incoming": "Oh, before I forget, which headphones do you recommend for running?",
+  "start": 7.125,
+  "end": 10.848
+ },
+ {
+  "id": "user_interruption/99",
+  "scenario": "user_interruption",
+  "context": "What's a good way to start learning a new language?",
+  "incoming": "Oh, before I forget, can we discuss how to improve writing skills in a language instead?",
+  "start": 6.635,
+  "end": 12.192
+ },
+ {
+  "id": "user_interruption/100",
+  "scenario": "user_interruption",
+  "context": "What should I know before getting a new puppy?",
+  "incoming": "Hold on, how do I choose the right type of pet food?",
+  "start": 6.827,
+  "end": 10.251
+ },
+ {
+  "id": "user_interruption/101",
+  "scenario": "user_interruption",
+  "context": "What's the best time to plant tomatoes?",
+  "incoming": "Oh, before I forget, how do I fix a leaky faucet?",
+  "start": 6.4,
+  "end": 10.272
+ },
+ {
+  "id": "user_interruption/102",
+  "scenario": "user_interruption",
+  "context": "What are some good snacks for weight loss?",
+  "incoming": "Oh, can we talk about something else? How about some travel tips?",
+  "start": 6.485,
+  "end": 10.421
+ },
+ {
+  "id": "user_interruption/103",
+  "scenario": "user_interruption",
+  "context": "How often should I run each week to stay healthy?",
+  "incoming": "By the way, do you know any good books to read?",
+  "start": 7.36,
+  "end": 11.083
+ },
+ {
+  "id": "user_interruption/104",
+  "scenario": "user_interruption",
+  "context": "Should I start investing in stocks?",
+  "incoming": "Yeah, but can we shift gears a bit? How do I start a garden?",
+  "start": 6.08,
+  "end": 10.144
+ },
+ {
+  "id": "user_interruption/105",
+  "scenario": "user_interruption",
+  "context": "What's the latest update on smart home devices?",
+  "incoming": "Wait, let's talk about something fun. Any movie recommendations?",
+  "start": 6.912,
+  "end": 10.336
+ },
+ {
+  "id": "user_interruption/106",
+  "scenario": "user_interruption",
+  "context": "How often should I take my dog to the vet?",
+  "incoming": "Hold on, can we discuss something else? What’s a good recipe for a quick dinner?",
+  "start": 7.381,
+  "end": 11.872
+ },
+ {
+  "id": "user_interruption/107",
+  "scenario": "user_interruption",
+  "context": "How do I check the oil in my car?",
+  "incoming": "Actually, can we change the topic? How do I bake a cake?",
+  "start": 7.381,
+  "end": 11.061
+ },
+ {
+  "id": "user_interruption/108",
+  "scenario": "user_interruption",
+  "context": "What are some ways to reduce water usage at home?",
+  "incoming": "Oh, before I forget, can you tell me how to improve my Wi-Fi speed at home?",
+  "start": 7.467,
+  "end": 12.918
+ },
+ {
+  "id": "user_interruption/109",
+  "scenario": "user_interruption",
+  "context": "Should I consider freelancing?",
+  "incoming": "Can we talk about something else? How about the latest video games?",
+  "start": 5.205,
+  "end": 9.013
+ },
+ {
+  "id": "user_interruption/110",
+  "scenario": "user_interruption",
+  "context": "How often should I take my dog to the vet?",
+  "incoming": "By the way, what about pet grooming? Should we talk about that now?",
+  "start": 7.125,
+  "end": 11.616
+ },
+ {
+  "id": "user_interruption/111",
+  "scenario": "user_interruption",
+  "context": "What's a simple recipe for a quick dinner?",
+  "incoming": "By the way, do you know any good salad recipes?",
+  "start": 6.741,
+  "end": 9.93
+ },
+ {
+  "id": "user_interruption/112",
+  "scenario": "user_interruption",
+  "context": "How can I make my living room look bigger?",
+  "incoming": "You know what, can we switch gears? How do I plan a road trip?",
+  "start": 7.019,
+  "end": 11.36
+ },
+ {
+  "id": "user_interruption/113",
+  "scenario": "user_interruption",
+  "context": "What makes a good science fiction movie?",
+  "incoming": "Can we talk about something else? What are your thoughts on comedies?",
+  "start": 6.528,
+  "end": 10.144
+ },
+ {
+  "id": "user_interruption/114",
+  "scenario": "user_interruption",
+  "context": "How can I make a daily schedule that works?",
+  "incoming": "Oh, before I forget, can we discuss relaxation techniques instead?",
+  "start": 6.635,
+  "end": 10.592
+ },
+ {
+  "id": "user_interruption/115",
+  "scenario": "user_interruption",
+  "context": "What are the latest trends in technology?",
+  "incoming": "By the way, can we switch gears and talk about smartphone apps?",
+  "start": 6.4,
+  "end": 10.485
+ },
+ {
+  "id": "user_interruption/116",
+  "scenario": "user_interruption",
+  "context": "Could you suggest some books to help with personal development?",
+  "incoming": "Can we talk about something else? How about fiction books?",
+  "start": 7.531,
+  "end": 10.144
+ },
+ {
+  "id": "user_interruption/117",
+  "scenario": "user_interruption",
+  "context": "Why is it important to conserve water?",
+  "incoming": "Oh, before I forget, can we discuss recycling initiatives?",
+  "start": 6.293,
+  "end": 9.973
+ },
+ {
+  "id": "user_interruption/118",
+  "scenario": "user_interruption",
+  "context": "What should I do this weekend?",
+  "incoming": "Oh, before I forget, set an alarm for 7 AM tomorrow.",
+  "start": 5.973,
+  "end": 9.461
+ },
+ {
+  "id": "user_interruption/119",
+  "scenario": "user_interruption",
+  "context": "Can you tell me how to cook pasta?",
+  "incoming": "Oh, before I forget, did you say something about making a salad?",
+  "start": 6.72,
+  "end": 10.741
+ },
+ {
+  "id": "user_interruption/120",
+  "scenario": "user_interruption",
+  "context": "What's the weather like today?",
+  "incoming": "By the way, can we check tomorrow's weather instead?",
+  "start": 5.44,
+  "end": 8.16
+ },
+ {
+  "id": "user_interruption/121",
+  "scenario": "user_interruption",
+  "context": "What are some things to do in Paris?",
+  "incoming": "Actually, can we talk about something else?",
+  "start": 6.123,
+  "end": 8.267
+ },
+ {
+  "id": "user_interruption/122",
+  "scenario": "user_interruption",
+  "context": "I'm looking for a good book to read",
+  "incoming": "Oh, before I forget, which new movies are out?",
+  "start": 6.955,
+  "end": 10.016
+ },
+ {
+  "id": "user_interruption/123",
+  "scenario": "user_interruption",
+  "context": "What are some budget-friendly travel destinations?",
+  "incoming": "Oh, before I forget, can you recommend some travel safety tips?",
+  "start": 6.763,
+  "end": 10.486
+ },
+ {
+  "id": "user_interruption/124",
+  "scenario": "user_interruption",
+  "context": "How often should I exercise?",
+  "incoming": "Can we talk about yoga specifically?",
+  "start": 5.824,
+  "end": 7.52
+ },
+ {
+  "id": "user_interruption/125",
+  "scenario": "user_interruption",
+  "context": "How do I take care of indoor plants?",
+  "incoming": "By the way, how about outdoor gardening tips?",
+  "start": 6.976,
+  "end": 9.547
+ },
+ {
+  "id": "user_interruption/126",
+  "scenario": "user_interruption",
+  "context": "What's the best way to start learning a new language?",
+  "incoming": "Actually, can you tell me about language apps instead?",
+  "start": 7.275,
+  "end": 10.08
+ },
+ {
+  "id": "user_interruption/127",
+  "scenario": "user_interruption",
+  "context": "What are some healthy breakfast options?",
+  "incoming": "Oh, before I forget, what about healthy snacks?",
+  "start": 6.272,
+  "end": 8.907
+ },
+ {
+  "id": "user_interruption/128",
+  "scenario": "user_interruption",
+  "context": "What's the latest smartphone like?",
+  "incoming": "Can we talk about laptops instead?",
+  "start": 6.229,
+  "end": 8.224
+ },
+ {
+  "id": "user_interruption/129",
+  "scenario": "user_interruption",
+  "context": "How do I get started with painting?",
+  "incoming": "Actually, can you tell me about sculpting?",
+  "start": 6.016,
+  "end": 8.203
+ },
+ {
+  "id": "user_interruption/130",
+  "scenario": "user_interruption",
+  "context": "I need some advice on eating healthier",
+  "incoming": "Actually, can we first talk about exercising?",
+  "start": 6.336,
+  "end": 8.843
+ },
+ {
+  "id": "user_interruption/131",
+  "scenario": "user_interruption",
+  "context": "Could you tell me about some interesting places to visit in Europe?",
+  "incoming": "Oh, before I forget, do I need a visa to travel to Europe?",
+  "start": 7.808,
+  "end": 12.021
+ },
+ {
+  "id": "user_interruption/132",
+  "scenario": "user_interruption",
+  "context": "I'm thinking about making some dessert tonight Got any suggestions?",
+  "incoming": "Can we talk about something else? Maybe a healthy dessert instead?",
+  "start": 7.403,
+  "end": 11.147
+ },
+ {
+  "id": "user_interruption/133",
+  "scenario": "user_interruption",
+  "context": "I want to watch a movie tonight What's good?",
+  "incoming": "Actually, let's talk about classic movies instead, okay?",
+  "start": 6.955,
+  "end": 9.654
+ },
+ {
+  "id": "user_interruption/134",
+  "scenario": "user_interruption",
+  "context": "How's the weather looking for today?",
+  "incoming": "By the way, can you remind me to call the dentist tomorrow?",
+  "start": 5.888,
+  "end": 10.251
+ },
+ {
+  "id": "user_interruption/135",
+  "scenario": "user_interruption",
+  "context": "I need to start working out more Any advice?",
+  "incoming": "Oh, before I forget, what’s the weather tomorrow? Should I plan an indoor workout?",
+  "start": 6.976,
+  "end": 11.595
+ },
+ {
+  "id": "user_interruption/136",
+  "scenario": "user_interruption",
+  "context": "I'm looking for a good book to read Any genre is fine",
+  "incoming": "By the way, do you know any good poetry books instead?",
+  "start": 7.893,
+  "end": 11.616
+ },
+ {
+  "id": "user_interruption/137",
+  "scenario": "user_interruption",
+  "context": "I'm thinking of buying a new laptop What should I look out for?",
+  "incoming": "Can we talk about smartphones instead? I might change my phone soon.",
+  "start": 8.171,
+  "end": 12.342
+ },
+ {
+  "id": "user_interruption/138",
+  "scenario": "user_interruption",
+  "context": "I want to start a garden What should I know?",
+  "incoming": "Actually, could you tell me about indoor plants instead?",
+  "start": 7.275,
+  "end": 10.315
+ },
+ {
+  "id": "user_interruption/139",
+  "scenario": "user_interruption",
+  "context": "I just got a new puppy Any advice?",
+  "incoming": "Oh, before I forget, what type of food is best for puppies?",
+  "start": 6.443,
+  "end": 10.528
+ },
+ {
+  "id": "user_interruption/140",
+  "scenario": "user_interruption",
+  "context": "I want to start learning a new language Which one do you suggest?",
+  "incoming": "Actually, can you tell me which apps are good for language learning?",
+  "start": 8.256,
+  "end": 11.915
+ },
+ {
+  "id": "user_interruption/141",
+  "scenario": "user_interruption",
+  "context": "I need a relaxing holiday Any suggestions on locations?",
+  "incoming": "Can we talk about budget options instead?",
+  "start": 7.147,
+  "end": 9.419
+ },
+ {
+  "id": "user_interruption/142",
+  "scenario": "user_interruption",
+  "context": "What's happening around the world today?",
+  "incoming": "Hang on, how do I make lasagna?",
+  "start": 6.037,
+  "end": 8.565
+ },
+ {
+  "id": "user_interruption/143",
+  "scenario": "user_interruption",
+  "context": "How often should I water my indoor plants?",
+  "incoming": "By the way, what's the weather like tomorrow?",
+  "start": 6.4,
+  "end": 9.205
+ },
+ {
+  "id": "user_interruption/144",
+  "scenario": "user_interruption",
+  "context": "What are some good places to visit in the city?",
+  "incoming": "Oh, before I forget, could you also suggest some good restaurants nearby?",
+  "start": 7.275,
+  "end": 11.467
+ },
+ {
+  "id": "user_interruption/145",
+  "scenario": "user_interruption",
+  "context": "I've been trying to eat healthier lately",
+  "incoming": "Oh, before I forget, can we discuss some exercise tips instead?",
+  "start": 6.315,
+  "end": 10.038
+ },
+ {
+  "id": "user_interruption/146",
+  "scenario": "user_interruption",
+  "context": "Can you tell me how to make a chocolate cake?",
+  "incoming": "Actually, can we talk about something else? How do I make a smoothie instead?",
+  "start": 7.403,
+  "end": 11.595
+ },
+ {
+  "id": "user_interruption/147",
+  "scenario": "user_interruption",
+  "context": "What's a good routine for a beginner?",
+  "incoming": "Hold on, do you also have tips for staying hydrated while working out?",
+  "start": 6.443,
+  "end": 10.72
+ },
+ {
+  "id": "user_interruption/148",
+  "scenario": "user_interruption",
+  "context": "What are the latest advancements in smartphones?",
+  "incoming": "Wait, speaking of technology, do you know if there are any new updates on smartwatches?",
+  "start": 6.144,
+  "end": 11.531
+ },
+ {
+  "id": "user_interruption/149",
+  "scenario": "user_interruption",
+  "context": "What subjects should I consider if I want to study science?",
+  "incoming": "Actually, let’s shift gears. Can you tell me about studying arts?",
+  "start": 7.509,
+  "end": 11.146
+ },
+ {
+  "id": "user_interruption/150",
+  "scenario": "user_interruption",
+  "context": "What are some good movies to watch that are thrillers?",
+  "incoming": "Wait, I think I’d rather watch something funny. Any comedy suggestions?",
+  "start": 7.595,
+  "end": 11.659
+ },
+ {
+  "id": "user_interruption/151",
+  "scenario": "user_interruption",
+  "context": "How can I reduce my plastic usage at home?",
+  "incoming": "By the way, how can I save energy at home?",
+  "start": 6.933,
+  "end": 10.464
+ },
+ {
+  "id": "user_interruption/152",
+  "scenario": "user_interruption",
+  "context": "What routine checks should I perform on my car?",
+  "incoming": "Hold that thought, should I be considering electric cars instead? What are the benefits?",
+  "start": 7.083,
+  "end": 11.958
+ },
+ {
+  "id": "user_interruption/153",
+  "scenario": "user_interruption",
+  "context": "Which supplements should I consider for better health?",
+  "incoming": "Oh, before I forget, what are some natural ways to improve sleep?",
+  "start": 6.933,
+  "end": 10.976
+ },
+ {
+  "id": "user_interruption/154",
+  "scenario": "user_interruption",
+  "context": "I would love to get some book suggestions",
+  "incoming": "Wait, can you remind me how to reset my email password?",
+  "start": 6.571,
+  "end": 10.571
+ },
+ {
+  "id": "user_interruption/155",
+  "scenario": "user_interruption",
+  "context": "Tell me more about having a balanced diet?",
+  "incoming": "By the way, how's the weather going to be tomorrow?",
+  "start": 6.656,
+  "end": 9.995
+ },
+ {
+  "id": "user_interruption/156",
+  "scenario": "user_interruption",
+  "context": "I'm not sure what to do this weekend",
+  "incoming": "By the way, how about movie recommendations instead?",
+  "start": 6.549,
+  "end": 10.016
+ },
+ {
+  "id": "user_interruption/157",
+  "scenario": "user_interruption",
+  "context": "Which exercise should I start with as a beginner?",
+  "incoming": "Oh, before I forget, can you set an alarm for 7 AM?",
+  "start": 7.253,
+  "end": 10.506
+ },
+ {
+  "id": "user_interruption/158",
+  "scenario": "user_interruption",
+  "context": "Which books do you recommend reading?",
+  "incoming": "Can we talk about something else? Maybe movies?",
+  "start": 6.144,
+  "end": 9.077
+ },
+ {
+  "id": "user_interruption/159",
+  "scenario": "user_interruption",
+  "context": "What’s a good place to visit in Europe?",
+  "incoming": "Oh, before I forget, did I turn off the oven?",
+  "start": 6.549,
+  "end": 9.568
+ },
+ {
+  "id": "user_interruption/160",
+  "scenario": "user_interruption",
+  "context": "How long does it typically take to become fluent in a new language?",
+  "incoming": "By the way, what's the score in the soccer game right now?",
+  "start": 8.064,
+  "end": 11.509
+ },
+ {
+  "id": "user_interruption/161",
+  "scenario": "user_interruption",
+  "context": "How often should I water my plants?",
+  "incoming": "Can we switch to discussing tech news instead?",
+  "start": 6.4,
+  "end": 8.907
+ },
+ {
+  "id": "user_interruption/162",
+  "scenario": "user_interruption",
+  "context": "What are some effective ways to manage stress?",
+  "incoming": "Oh, before I forget, I need to add milk to my shopping list.",
+  "start": 6.784,
+  "end": 10.912
+ },
+ {
+  "id": "user_interruption/163",
+  "scenario": "user_interruption",
+  "context": "What do you think makes a great cup of coffee?",
+  "incoming": "Actually, let's talk about tea instead. What kinds are there?",
+  "start": 7.04,
+  "end": 10.315
+ },
+ {
+  "id": "user_interruption/164",
+  "scenario": "user_interruption",
+  "context": "What are some recent advancements in space technology?",
+  "incoming": "Hold on, how do I make a smoothie?",
+  "start": 6.72,
+  "end": 9.248
+ },
+ {
+  "id": "user_interruption/165",
+  "scenario": "user_interruption",
+  "context": "How can I train my dog to follow basic commands?",
+  "incoming": "Wait, can I switch my phone to silent mode through voice command?",
+  "start": 7.275,
+  "end": 10.891
+ },
+ {
+  "id": "user_interruption/166",
+  "scenario": "user_interruption",
+  "context": "Where should I travel next?",
+  "incoming": "Just a minute, what's tomorrow's date?",
+  "start": 5.781,
+  "end": 8.181
+ },
+ {
+  "id": "user_interruption/167",
+  "scenario": "user_interruption",
+  "context": "I need some new books to read",
+  "incoming": "Can we talk about something else? How about some music suggestions?",
+  "start": 6.229,
+  "end": 9.781
+ },
+ {
+  "id": "user_interruption/168",
+  "scenario": "user_interruption",
+  "context": "How often should I water my indoor plants?",
+  "incoming": "Oh, by the way, how do I know if my plant needs more sunlight?",
+  "start": 6.72,
+  "end": 11.189
+ },
+ {
+  "id": "user_interruption/169",
+  "scenario": "user_interruption",
+  "context": "Can you suggest some healthy breakfast ideas?",
+  "incoming": "Actually, can we talk about something else? How can I stay hydrated?",
+  "start": 6.464,
+  "end": 10.187
+ },
+ {
+  "id": "user_interruption/170",
+  "scenario": "user_interruption",
+  "context": "What's the best time to visit Europe?",
+  "incoming": "Oh, before I forget, should I exchange my money before I go or when I arrive?",
+  "start": 6.443,
+  "end": 11.446
+ },
+ {
+  "id": "user_interruption/171",
+  "scenario": "user_interruption",
+  "context": "How often should I go to the gym?",
+  "incoming": "Actually, can we switch topics? What are some good stress relief methods?",
+  "start": 6.848,
+  "end": 10.869
+ },
+ {
+  "id": "user_interruption/172",
+  "scenario": "user_interruption",
+  "context": "What is the best way to start learning a new language?",
+  "incoming": "Can we talk about something else? What about cooking tips?",
+  "start": 7.253,
+  "end": 10.272
+ },
+ {
+  "id": "user_interruption/173",
+  "scenario": "user_interruption",
+  "context": "What should I feed my new puppy?",
+  "incoming": "Oh, by the way, do you have any tips on training them?",
+  "start": 6.571,
+  "end": 10.102
+ },
+ {
+  "id": "user_interruption/174",
+  "scenario": "user_interruption",
+  "context": "How can I protect my online accounts?",
+  "incoming": "Actually, can we talk about online shopping instead?",
+  "start": 6.464,
+  "end": 8.949
+ },
+ {
+  "id": "user_interruption/175",
+  "scenario": "user_interruption",
+  "context": "What are some good books to read for motivation?",
+  "incoming": "Oh, before I forget, how about science fiction books?",
+  "start": 7.061,
+  "end": 10.058
+ },
+ {
+  "id": "user_interruption/176",
+  "scenario": "user_interruption",
+  "context": "What's the difference between horror and thriller movies?",
+  "incoming": "Can we switch to talking about comedy movies?",
+  "start": 6.955,
+  "end": 9.632
+ },
+ {
+  "id": "user_interruption/177",
+  "scenario": "user_interruption",
+  "context": "Why is recycling important?",
+  "incoming": "Actually, what can I do to save water at home?",
+  "start": 5.504,
+  "end": 8.843
+ },
+ {
+  "id": "user_interruption/178",
+  "scenario": "user_interruption",
+  "context": "I love sci-fi!",
+  "incoming": "Actually, let's switch gears. Do you have any advice on gardening?",
+  "start": 5.227,
+  "end": 8.758
+ },
+ {
+  "id": "user_interruption/179",
+  "scenario": "user_interruption",
+  "context": "I want to start learning a new language",
+  "incoming": "By the way, do we need milk?",
+  "start": 6.635,
+  "end": 9.206
+ },
+ {
+  "id": "user_interruption/180",
+  "scenario": "user_interruption",
+  "context": "What should we do this weekend?",
+  "incoming": "By the way, did I tell you about my new hobby?",
+  "start": 6.037,
+  "end": 9.781
+ },
+ {
+  "id": "user_interruption/181",
+  "scenario": "user_interruption",
+  "context": "I'm thinking of cooking something new tonight",
+  "incoming": "Can we talk about something else? Maybe something about gardening?",
+  "start": 6.357,
+  "end": 9.29
+ },
+ {
+  "id": "user_interruption/182",
+  "scenario": "user_interruption",
+  "context": "I want to watch a new movie tonight",
+  "incoming": "Oh, before I forget, how do I fix a slow computer?",
+  "start": 6.699,
+  "end": 10.443
+ },
+ {
+  "id": "user_interruption/183",
+  "scenario": "user_interruption",
+  "context": "What's new in technology these days?",
+  "incoming": "Actually, how do I relax my mind?",
+  "start": 5.824,
+  "end": 7.968
+ },
+ {
+  "id": "user_interruption/184",
+  "scenario": "user_interruption",
+  "context": "I want to start a new fitness routine",
+  "incoming": "By the way, do you know any good book recommendations?",
+  "start": 6.699,
+  "end": 10.123
+ },
+ {
+  "id": "user_interruption/185",
+  "scenario": "user_interruption",
+  "context": "I need a vacation Where should I go?",
+  "incoming": "Oh, before I forget, what's a healthy breakfast option?",
+  "start": 6.677,
+  "end": 9.738
+ },
+ {
+  "id": "user_interruption/186",
+  "scenario": "user_interruption",
+  "context": "I’m thinking about learning Spanish",
+  "incoming": "Can we talk about something else, like how to improve my workspace?",
+  "start": 5.845,
+  "end": 10.122
+ },
+ {
+  "id": "user_interruption/187",
+  "scenario": "user_interruption",
+  "context": "I'm planning to redo my kitchen",
+  "incoming": "By the way, what's the weather going to be like tomorrow?",
+  "start": 5.653,
+  "end": 9.226
+ },
+ {
+  "id": "user_interruption/188",
+  "scenario": "user_interruption",
+  "context": "I want to learn to play the guitar",
+  "incoming": "Hold on, do you have any tips for sleeping better?",
+  "start": 6.677,
+  "end": 9.994
+ },
+ {
+  "id": "user_interruption/189",
+  "scenario": "user_interruption",
+  "context": "I'm thinking about traveling more",
+  "incoming": "Oh, before I forget, could we discuss some home decoration ideas?",
+  "start": 5.44,
+  "end": 9.291
+ },
+ {
+  "id": "user_interruption/190",
+  "scenario": "user_interruption",
+  "context": "I'm thinking about getting a dog",
+  "incoming": "Actually, I need advice on time management.",
+  "start": 5.973,
+  "end": 8.416
+ },
+ {
+  "id": "user_interruption/191",
+  "scenario": "user_interruption",
+  "context": "How do I take care of orchids?",
+  "incoming": "Oops, forgot to ask earlier, how's the traffic right now?",
+  "start": 6.144,
+  "end": 10.101
+ },
+ {
+  "id": "user_interruption/192",
+  "scenario": "user_interruption",
+  "context": "How do I get to the park?",
+  "incoming": "Can we talk about something else?",
+  "start": 5.888,
+  "end": 7.883
+ },
+ {
+  "id": "user_interruption/193",
+  "scenario": "user_interruption",
+  "context": "What's the weather like today?",
+  "incoming": "Oh, before I forget, did I leave my umbrella here last time?",
+  "start": 5.696,
+  "end": 9.568
+ },
+ {
+  "id": "user_interruption/194",
+  "scenario": "user_interruption",
+  "context": "How do I make a chocolate cake?",
+  "incoming": "By the way, do we have any eggs in the fridge?",
+  "start": 6.144,
+  "end": 9.12
+ },
+ {
+  "id": "user_interruption/195",
+  "scenario": "user_interruption",
+  "context": "Suggest a good comedy to watch",
+  "incoming": "Actually, let's choose a horror movie instead.",
+  "start": 6.037,
+  "end": 8.394
+ },
+ {
+  "id": "user_interruption/196",
+  "scenario": "user_interruption",
+  "context": "What are some good workouts for beginners?",
+  "incoming": "Hang on, what about yoga? Is that good too?",
+  "start": 6.272,
+  "end": 9.333
+ },
+ {
+  "id": "user_interruption/197",
+  "scenario": "user_interruption",
+  "context": "How can I reduce my carbon footprint?",
+  "incoming": "Sorry to cut you off, but what can we do about water conservation?",
+  "start": 6.251,
+  "end": 10.592
+ },
+ {
+  "id": "user_interruption/198",
+  "scenario": "user_interruption",
+  "context": "How do I return an item I bought online?",
+  "incoming": "Oh, before I forget, what are some good sites for buying books?",
+  "start": 6.613,
+  "end": 10.336
+ },
+ {
+  "id": "user_interruption/199",
+  "scenario": "user_interruption",
+  "context": "What are some must-see places in Europe?",
+  "incoming": "Can we discuss travel tips instead?",
+  "start": 6.4,
+  "end": 8.117
+ },
+ {
+  "id": "user_interruption/200",
+  "scenario": "user_interruption",
+  "context": "I want to learn a new language",
+  "incoming": "Can we talk about something else? Like, tips for better sleep?",
+  "start": 6.549,
+  "end": 9.866
+ },
+ {
+  "id": "user_backchannel/1",
+  "scenario": "user_backchannel",
+  "context": "Present a thorough explanation of global warming.",
+  "incoming": "yes yeah",
+  "start": 6.601,
+  "end": 7.298
+ },
+ {
+  "id": "user_backchannel/2",
+  "scenario": "user_backchannel",
+  "context": "Detail photosynthesis in full.",
+  "incoming": "right yeah",
+  "start": 5.997,
+  "end": 6.787
+ },
+ {
+  "id": "user_backchannel/3",
+  "scenario": "user_backchannel",
+  "context": "Describe quantum computing comprehensively.",
+  "incoming": "yup",
+  "start": 6.461,
+  "end": 7.065
+ },
+ {
+  "id": "user_backchannel/4",
+  "scenario": "user_backchannel",
+  "context": "Offer a complete breakdown of machine learning.",
+  "incoming": "uh-huh",
+  "start": 6.508,
+  "end": 7.065
+ },
+ {
+  "id": "user_backchannel/5",
+  "scenario": "user_backchannel",
+  "context": "Provide an in-depth overview of blockchain technology.",
+  "incoming": "mm-hmm yeah",
+  "start": 7.483,
+  "end": 8.458
+ },
+ {
+  "id": "user_backchannel/6",
+  "scenario": "user_backchannel",
+  "context": "Discuss climate change exhaustively.",
+  "incoming": "yeah right",
+  "start": 6.415,
+  "end": 7.297
+ },
+ {
+  "id": "user_backchannel/7",
+  "scenario": "user_backchannel",
+  "context": "Give a detailed introduction to the stock market.",
+  "incoming": "right yeah",
+  "start": 6.415,
+  "end": 7.205
+ },
+ {
+  "id": "user_backchannel/8",
+  "scenario": "user_backchannel",
+  "context": "Illuminate mental health holistically.",
+  "incoming": "uh-huh yeah",
+  "start": 6.136,
+  "end": 6.972
+ },
+ {
+  "id": "user_backchannel/9",
+  "scenario": "user_backchannel",
+  "context": "Deliver a full exploration of the human brain.",
+  "incoming": "yeah okay",
+  "start": 6.554,
+  "end": 7.715
+ },
+ {
+  "id": "user_backchannel/10",
+  "scenario": "user_backchannel",
+  "context": "Outline ancient Egypt clearly.",
+  "incoming": "alright",
+  "start": 6.043,
+  "end": 6.74
+ },
+ {
+  "id": "user_backchannel/11",
+  "scenario": "user_backchannel",
+  "context": "Summarize black holes comprehensively.",
+  "incoming": "mm-hmm yeah",
+  "start": 5.997,
+  "end": 6.972
+ },
+ {
+  "id": "user_backchannel/12",
+  "scenario": "user_backchannel",
+  "context": "Explain time-travel theories completely.",
+  "incoming": "mm-hmm",
+  "start": 6.136,
+  "end": 7.018
+ },
+ {
+  "id": "user_backchannel/13",
+  "scenario": "user_backchannel",
+  "context": "Present renewable energy in depth.",
+  "incoming": "totally",
+  "start": 6.09,
+  "end": 6.926
+ },
+ {
+  "id": "user_backchannel/14",
+  "scenario": "user_backchannel",
+  "context": "Detail robotics thoroughly.",
+  "incoming": "yeah yes",
+  "start": 5.718,
+  "end": 6.461
+ },
+ {
+  "id": "user_backchannel/15",
+  "scenario": "user_backchannel",
+  "context": "Describe electric vehicles comprehensively.",
+  "incoming": "uh-huh sure",
+  "start": 6.276,
+  "end": 7.066
+ },
+ {
+  "id": "user_backchannel/16",
+  "scenario": "user_backchannel",
+  "context": "Offer a step-by-step account of artificial intelligence.",
+  "incoming": "uh-huh sure",
+  "start": 7.112,
+  "end": 7.902
+ },
+ {
+  "id": "user_backchannel/17",
+  "scenario": "user_backchannel",
+  "context": "Provide a complete review of vaccines.",
+  "incoming": "mhm yeah",
+  "start": 6.229,
+  "end": 7.019
+ },
+ {
+  "id": "user_backchannel/18",
+  "scenario": "user_backchannel",
+  "context": "Discuss nutrition in detail.",
+  "incoming": "yeah right",
+  "start": 5.579,
+  "end": 6.461
+ },
+ {
+  "id": "user_backchannel/19",
+  "scenario": "user_backchannel",
+  "context": "Give a full picture of exercise benefits.",
+  "incoming": "sure yeah",
+  "start": 6.368,
+  "end": 7.111
+ },
+ {
+  "id": "user_backchannel/20",
+  "scenario": "user_backchannel",
+  "context": "Illuminate public speaking thoroughly.",
+  "incoming": "yeah right",
+  "start": 6.183,
+  "end": 7.065
+ },
+ {
+  "id": "user_backchannel/21",
+  "scenario": "user_backchannel",
+  "context": "Deliver a deep exploration of space exploration.",
+  "incoming": "okay yeah",
+  "start": 6.879,
+  "end": 7.808
+ },
+ {
+  "id": "user_backchannel/22",
+  "scenario": "user_backchannel",
+  "context": "Outline the history of the internet comprehensively.",
+  "incoming": "uh-huh yeah",
+  "start": 6.461,
+  "end": 7.297
+ },
+ {
+  "id": "user_backchannel/23",
+  "scenario": "user_backchannel",
+  "context": "Summarize data privacy clearly.",
+  "incoming": "sure yeah",
+  "start": 5.858,
+  "end": 6.601
+ },
+ {
+  "id": "user_backchannel/24",
+  "scenario": "user_backchannel",
+  "context": "Explain sustainable agriculture fully.",
+  "incoming": "I see that",
+  "start": 6.322,
+  "end": 7.297
+ },
+ {
+  "id": "user_backchannel/25",
+  "scenario": "user_backchannel",
+  "context": "Present cloud computing step by step.",
+  "incoming": "indeed",
+  "start": 6.183,
+  "end": 6.926
+ },
+ {
+  "id": "user_backchannel/26",
+  "scenario": "user_backchannel",
+  "context": "Detail neural networks thoroughly.",
+  "incoming": "ok sure",
+  "start": 5.95,
+  "end": 6.693
+ },
+ {
+  "id": "user_backchannel/27",
+  "scenario": "user_backchannel",
+  "context": "Describe 5G technology comprehensively.",
+  "incoming": "uh-huh",
+  "start": 6.601,
+  "end": 7.158
+ },
+ {
+  "id": "user_backchannel/28",
+  "scenario": "user_backchannel",
+  "context": "Offer a complete overview of cybersecurity.",
+  "incoming": "yup",
+  "start": 6.694,
+  "end": 7.298
+ },
+ {
+  "id": "user_backchannel/29",
+  "scenario": "user_backchannel",
+  "context": "Provide an in-depth look at virtual reality.",
+  "incoming": "alright",
+  "start": 6.601,
+  "end": 7.298
+ },
+ {
+  "id": "user_backchannel/30",
+  "scenario": "user_backchannel",
+  "context": "Discuss augmented reality holistically.",
+  "incoming": "yeah yes",
+  "start": 6.879,
+  "end": 7.622
+ },
+ {
+  "id": "user_backchannel/31",
+  "scenario": "user_backchannel",
+  "context": "Give a step-by-step history of World War II.",
+  "incoming": "yeah yes",
+  "start": 6.415,
+  "end": 7.158
+ },
+ {
+  "id": "user_backchannel/32",
+  "scenario": "user_backchannel",
+  "context": "Illuminate quantum entanglement comprehensively.",
+  "incoming": "yup",
+  "start": 6.415,
+  "end": 7.019
+ },
+ {
+  "id": "user_backchannel/33",
+  "scenario": "user_backchannel",
+  "context": "Deliver a full exploration of meditation.",
+  "incoming": "yeah",
+  "start": 6.043,
+  "end": 6.647
+ },
+ {
+  "id": "user_backchannel/34",
+  "scenario": "user_backchannel",
+  "context": "Outline sleep science clearly.",
+  "incoming": "sure",
+  "start": 5.672,
+  "end": 6.322
+ },
+ {
+  "id": "user_backchannel/35",
+  "scenario": "user_backchannel",
+  "context": "Summarize the carbon footprint thoroughly.",
+  "incoming": "right",
+  "start": 6.229,
+  "end": 6.833
+ },
+ {
+  "id": "user_backchannel/36",
+  "scenario": "user_backchannel",
+  "context": "Explain digital marketing in depth.",
+  "incoming": "exactly",
+  "start": 6.136,
+  "end": 7.204
+ },
+ {
+  "id": "user_backchannel/37",
+  "scenario": "user_backchannel",
+  "context": "Present social media algorithms clearly.",
+  "incoming": "uhuh",
+  "start": 6.136,
+  "end": 6.786
+ },
+ {
+  "id": "user_backchannel/38",
+  "scenario": "user_backchannel",
+  "context": "Detail autonomous cars comprehensively.",
+  "incoming": "yeah yeah",
+  "start": 6.415,
+  "end": 7.158
+ },
+ {
+  "id": "user_backchannel/39",
+  "scenario": "user_backchannel",
+  "context": "Describe cryptocurrency thoroughly.",
+  "incoming": "indeed",
+  "start": 6.276,
+  "end": 7.019
+ },
+ {
+  "id": "user_backchannel/40",
+  "scenario": "user_backchannel",
+  "context": "Offer a complete breakdown of machine translation.",
+  "incoming": "mm-hmm yeah",
+  "start": 6.647,
+  "end": 7.622
+ },
+ {
+  "id": "user_backchannel/41",
+  "scenario": "user_backchannel",
+  "context": "Provide an in-depth overview of language acquisition.",
+  "incoming": "ok sure",
+  "start": 6.833,
+  "end": 7.576
+ },
+ {
+  "id": "user_backchannel/42",
+  "scenario": "user_backchannel",
+  "context": "Discuss bilingualism fully.",
+  "incoming": "uh-huh sure",
+  "start": 5.765,
+  "end": 6.555
+ },
+ {
+  "id": "user_backchannel/43",
+  "scenario": "user_backchannel",
+  "context": "Give a comprehensive review of ancient Greek mythology.",
+  "incoming": "alright",
+  "start": 6.786,
+  "end": 7.483
+ },
+ {
+  "id": "user_backchannel/44",
+  "scenario": "user_backchannel",
+  "context": "Illuminate dinosaurs holistically.",
+  "incoming": "mhm yeah",
+  "start": 5.904,
+  "end": 6.694
+ },
+ {
+  "id": "user_backchannel/45",
+  "scenario": "user_backchannel",
+  "context": "Deliver a clear account of ocean currents.",
+  "incoming": "I see that",
+  "start": 6.415,
+  "end": 7.39
+ },
+ {
+  "id": "user_backchannel/46",
+  "scenario": "user_backchannel",
+  "context": "Outline the water cycle thoroughly.",
+  "incoming": "uh-huh yeah",
+  "start": 6.043,
+  "end": 6.879
+ },
+ {
+  "id": "user_backchannel/47",
+  "scenario": "user_backchannel",
+  "context": "Summarize gravity comprehensively.",
+  "incoming": "sure yeah",
+  "start": 5.95,
+  "end": 6.693
+ },
+ {
+  "id": "user_backchannel/48",
+  "scenario": "user_backchannel",
+  "context": "Explain the periodic table completely.",
+  "incoming": "yes yeah",
+  "start": 6.043,
+  "end": 6.74
+ },
+ {
+  "id": "user_backchannel/49",
+  "scenario": "user_backchannel",
+  "context": "Present volcanoes in detail.",
+  "incoming": "I see",
+  "start": 5.765,
+  "end": 6.555
+ },
+ {
+  "id": "user_backchannel/50",
+  "scenario": "user_backchannel",
+  "context": "Detail earthquakes thoroughly.",
+  "incoming": "exactly",
+  "start": 5.625,
+  "end": 6.693
+ },
+ {
+  "id": "user_backchannel/51",
+  "scenario": "user_backchannel",
+  "context": "Describe tsunamis comprehensively.",
+  "incoming": "sure yeah",
+  "start": 6.136,
+  "end": 6.879
+ },
+ {
+  "id": "user_backchannel/52",
+  "scenario": "user_backchannel",
+  "context": "Offer an exhaustive overview of tornadoes.",
+  "incoming": "uh-huh yeah",
+  "start": 6.554,
+  "end": 7.39
+ },
+ {
+  "id": "user_backchannel/53",
+  "scenario": "user_backchannel",
+  "context": "Provide a deep dive into hurricanes.",
+  "incoming": "totally",
+  "start": 6.136,
+  "end": 6.972
+ },
+ {
+  "id": "user_backchannel/54",
+  "scenario": "user_backchannel",
+  "context": "Discuss weather forecasting fully.",
+  "incoming": "uh-huh",
+  "start": 6.136,
+  "end": 6.693
+ },
+ {
+  "id": "user_backchannel/55",
+  "scenario": "user_backchannel",
+  "context": "Give an in-depth explanation of genetic engineering.",
+  "incoming": "right yeah",
+  "start": 6.879,
+  "end": 7.669
+ },
+ {
+  "id": "user_backchannel/56",
+  "scenario": "user_backchannel",
+  "context": "Illuminate stem cells holistically.",
+  "incoming": "yes",
+  "start": 6.183,
+  "end": 6.926
+ },
+ {
+  "id": "user_backchannel/57",
+  "scenario": "user_backchannel",
+  "context": "Deliver a thorough overview of the immune system.",
+  "incoming": "got it",
+  "start": 6.74,
+  "end": 7.344
+ },
+ {
+  "id": "user_backchannel/58",
+  "scenario": "user_backchannel",
+  "context": "Outline bacteria and viruses clearly.",
+  "incoming": "yeah okay",
+  "start": 6.368,
+  "end": 7.529
+ },
+ {
+  "id": "user_backchannel/59",
+  "scenario": "user_backchannel",
+  "context": "Summarize antibiotics comprehensively.",
+  "incoming": "yes yeah",
+  "start": 6.276,
+  "end": 6.973
+ },
+ {
+  "id": "user_backchannel/60",
+  "scenario": "user_backchannel",
+  "context": "Explain astronomy in depth.",
+  "incoming": "yes sure",
+  "start": 5.579,
+  "end": 6.601
+ },
+ {
+  "id": "user_backchannel/61",
+  "scenario": "user_backchannel",
+  "context": "Present the solar system thoroughly.",
+  "incoming": "I see",
+  "start": 5.997,
+  "end": 6.787
+ },
+ {
+  "id": "user_backchannel/62",
+  "scenario": "user_backchannel",
+  "context": "Detail life on Mars comprehensively.",
+  "incoming": "exactly",
+  "start": 6.183,
+  "end": 7.251
+ },
+ {
+  "id": "user_backchannel/63",
+  "scenario": "user_backchannel",
+  "context": "Describe space telescopes completely.",
+  "incoming": "mm-hmm",
+  "start": 6.183,
+  "end": 7.065
+ },
+ {
+  "id": "user_backchannel/64",
+  "scenario": "user_backchannel",
+  "context": "Offer a clear account of the moon landing.",
+  "incoming": "yeah yes",
+  "start": 6.322,
+  "end": 7.065
+ },
+ {
+  "id": "user_backchannel/65",
+  "scenario": "user_backchannel",
+  "context": "Provide a step-by-step view of the International Space Station.",
+  "incoming": "okay yeah",
+  "start": 7.39,
+  "end": 8.319
+ },
+ {
+  "id": "user_backchannel/66",
+  "scenario": "user_backchannel",
+  "context": "Discuss renewable and non-renewable energy holistically.",
+  "incoming": "yeah sure",
+  "start": 7.204,
+  "end": 8.086
+ },
+ {
+  "id": "user_backchannel/67",
+  "scenario": "user_backchannel",
+  "context": "Give a comprehensive explanation of the greenhouse effect.",
+  "incoming": "exactly",
+  "start": 7.158,
+  "end": 8.226
+ },
+ {
+  "id": "user_backchannel/68",
+  "scenario": "user_backchannel",
+  "context": "Illuminate photosynthesis and respiration thoroughly.",
+  "incoming": "uh-huh yeah",
+  "start": 6.972,
+  "end": 7.808
+ },
+ {
+  "id": "user_backchannel/69",
+  "scenario": "user_backchannel",
+  "context": "Deliver a full exploration of biodiversity.",
+  "incoming": "yeah",
+  "start": 6.694,
+  "end": 7.298
+ },
+ {
+  "id": "user_backchannel/70",
+  "scenario": "user_backchannel",
+  "context": "Outline ecosystems clearly.",
+  "incoming": "mm-hmm yeah",
+  "start": 5.904,
+  "end": 6.879
+ },
+ {
+  "id": "user_backchannel/71",
+  "scenario": "user_backchannel",
+  "context": "Summarize food chains comprehensively.",
+  "incoming": "uh-huh yeah",
+  "start": 6.229,
+  "end": 7.065
+ },
+ {
+  "id": "user_backchannel/72",
+  "scenario": "user_backchannel",
+  "context": "Explain recycling in depth.",
+  "incoming": "yes",
+  "start": 5.672,
+  "end": 6.415
+ },
+ {
+  "id": "user_backchannel/73",
+  "scenario": "user_backchannel",
+  "context": "Present plastic pollution thoroughly.",
+  "incoming": "indeed",
+  "start": 6.183,
+  "end": 6.926
+ },
+ {
+  "id": "user_backchannel/74",
+  "scenario": "user_backchannel",
+  "context": "Detail deforestation comprehensively.",
+  "incoming": "mm-hmm yeah",
+  "start": 6.322,
+  "end": 7.297
+ },
+ {
+  "id": "user_backchannel/75",
+  "scenario": "user_backchannel",
+  "context": "Describe endangered species fully.",
+  "incoming": "ok sure",
+  "start": 6.136,
+  "end": 6.879
+ },
+ {
+  "id": "user_backchannel/76",
+  "scenario": "user_backchannel",
+  "context": "Offer a complete overview of evolution.",
+  "incoming": "yeah right",
+  "start": 6.183,
+  "end": 7.065
+ },
+ {
+  "id": "user_backchannel/77",
+  "scenario": "user_backchannel",
+  "context": "Provide an in-depth review of Darwin’s theory.",
+  "incoming": "yeah sure",
+  "start": 6.601,
+  "end": 7.483
+ },
+ {
+  "id": "user_backchannel/78",
+  "scenario": "user_backchannel",
+  "context": "Discuss gene editing step by step.",
+  "incoming": "yeah yes",
+  "start": 6.136,
+  "end": 6.879
+ },
+ {
+  "id": "user_backchannel/79",
+  "scenario": "user_backchannel",
+  "context": "Give a thorough account of CRISPR.",
+  "incoming": "yes yeah",
+  "start": 5.765,
+  "end": 6.462
+ },
+ {
+  "id": "user_backchannel/80",
+  "scenario": "user_backchannel",
+  "context": "Illuminate vaccination history comprehensively.",
+  "incoming": "I see",
+  "start": 6.415,
+  "end": 7.205
+ },
+ {
+  "id": "user_backchannel/81",
+  "scenario": "user_backchannel",
+  "context": "Deliver a full exploration of COVID-19.",
+  "incoming": "yeah yes",
+  "start": 6.647,
+  "end": 7.39
+ },
+ {
+  "id": "user_backchannel/82",
+  "scenario": "user_backchannel",
+  "context": "Outline pandemics clearly.",
+  "incoming": "mm-hmm",
+  "start": 5.672,
+  "end": 6.554
+ },
+ {
+  "id": "user_backchannel/83",
+  "scenario": "user_backchannel",
+  "context": "Summarize mental disorders comprehensively.",
+  "incoming": "yeah",
+  "start": 6.368,
+  "end": 6.972
+ },
+ {
+  "id": "user_backchannel/84",
+  "scenario": "user_backchannel",
+  "context": "Explain stress management in depth.",
+  "incoming": "sure",
+  "start": 6.136,
+  "end": 6.786
+ },
+ {
+  "id": "user_backchannel/85",
+  "scenario": "user_backchannel",
+  "context": "Present emotional intelligence thoroughly.",
+  "incoming": "alright",
+  "start": 6.276,
+  "end": 6.973
+ },
+ {
+  "id": "user_backchannel/86",
+  "scenario": "user_backchannel",
+  "context": "Detail mindfulness comprehensively.",
+  "incoming": "yeah sure",
+  "start": 6.136,
+  "end": 7.018
+ },
+ {
+  "id": "user_backchannel/87",
+  "scenario": "user_backchannel",
+  "context": "Describe cognitive biases step by step.",
+  "incoming": "mm-hmm",
+  "start": 6.461,
+  "end": 7.343
+ },
+ {
+  "id": "user_backchannel/88",
+  "scenario": "user_backchannel",
+  "context": "Offer a clear guide to logical fallacies.",
+  "incoming": "uh-huh",
+  "start": 6.461,
+  "end": 7.018
+ },
+ {
+  "id": "user_backchannel/89",
+  "scenario": "user_backchannel",
+  "context": "Provide a thorough overview of the philosophy of science.",
+  "incoming": "uhuh",
+  "start": 7.065,
+  "end": 7.715
+ },
+ {
+  "id": "user_backchannel/90",
+  "scenario": "user_backchannel",
+  "context": "Discuss moral dilemmas fully.",
+  "incoming": "totally",
+  "start": 5.858,
+  "end": 6.694
+ },
+ {
+  "id": "user_backchannel/91",
+  "scenario": "user_backchannel",
+  "context": "Give an in-depth explanation of ethics in AI.",
+  "incoming": "okay yeah",
+  "start": 6.74,
+  "end": 7.669
+ },
+ {
+  "id": "user_backchannel/92",
+  "scenario": "user_backchannel",
+  "context": "Illuminate robot ethics comprehensively.",
+  "incoming": "yeah yeah",
+  "start": 6.694,
+  "end": 7.437
+ },
+ {
+  "id": "user_backchannel/93",
+  "scenario": "user_backchannel",
+  "context": "Deliver a step-by-step view of the future of work.",
+  "incoming": "uhuh",
+  "start": 6.74,
+  "end": 7.39
+ },
+ {
+  "id": "user_backchannel/94",
+  "scenario": "user_backchannel",
+  "context": "Outline remote work trends clearly.",
+  "incoming": "exactly",
+  "start": 5.672,
+  "end": 6.74
+ },
+ {
+  "id": "user_backchannel/95",
+  "scenario": "user_backchannel",
+  "context": "Summarize the digital nomad lifestyle comprehensively.",
+  "incoming": "yeah right",
+  "start": 7.019,
+  "end": 7.901
+ },
+ {
+  "id": "user_backchannel/96",
+  "scenario": "user_backchannel",
+  "context": "Explain the gig economy in depth.",
+  "incoming": "exactly",
+  "start": 5.997,
+  "end": 7.065
+ },
+ {
+  "id": "user_backchannel/97",
+  "scenario": "user_backchannel",
+  "context": "Present entrepreneurship thoroughly.",
+  "incoming": "totally",
+  "start": 6.183,
+  "end": 7.019
+ },
+ {
+  "id": "user_backchannel/98",
+  "scenario": "user_backchannel",
+  "context": "Detail startups comprehensively.",
+  "incoming": "mm-hmm yeah",
+  "start": 5.997,
+  "end": 6.972
+ },
+ {
+  "id": "talking_to_other/1",
+  "scenario": "talking_to_other",
+  "context": "What's the population of Toronto?",
+  "incoming": "Dad, microwave just quit on us.",
+  "start": 5.904,
+  "end": 7.529
+ },
+ {
+  "id": "talking_to_other/2",
+  "scenario": "talking_to_other",
+  "context": "What’s the sunrise time tomorrow?",
+  "incoming": "Coach Garcia, ankle's still kinda sore.",
+  "start": 5.997,
+  "end": 8.273
+ },
+ {
+  "id": "talking_to_other/3",
+  "scenario": "talking_to_other",
+  "context": "How many calories are in an avocado?",
+  "incoming": "Ben, don't forget Mom's birthday Sunday.",
+  "start": 6.09,
+  "end": 8.087
+ },
+ {
+  "id": "talking_to_other/4",
+  "scenario": "talking_to_other",
+  "context": "Add almond milk to my grocery list.",
+  "incoming": "Diego, you still good for lunch Friday?",
+  "start": 6.183,
+  "end": 8.319
+ },
+ {
+  "id": "talking_to_other/5",
+  "scenario": "talking_to_other",
+  "context": "How far is it from Beijing to Shanghai?",
+  "incoming": "Derek, traffic was insanity today.",
+  "start": 6.322,
+  "end": 8.737
+ },
+ {
+  "id": "talking_to_other/6",
+  "scenario": "talking_to_other",
+  "context": "Find a vegetarian recipe with quinoa.",
+  "incoming": "Grandma, I'm fine, seriously, no worries.",
+  "start": 6.136,
+  "end": 8.504
+ },
+ {
+  "id": "talking_to_other/7",
+  "scenario": "talking_to_other",
+  "context": "What's the score of the Mariners game?",
+  "incoming": "Trainer Kim, how many reps left again?",
+  "start": 5.997,
+  "end": 8.087
+ },
+ {
+  "id": "talking_to_other/8",
+  "scenario": "talking_to_other",
+  "context": "Translate 'I love sushi' to Japanese.",
+  "incoming": "Paul, poke me if I forget to send that email.",
+  "start": 6.554,
+  "end": 9.015
+ },
+ {
+  "id": "talking_to_other/9",
+  "scenario": "talking_to_other",
+  "context": "What's the definition of 'photosynthesis'?",
+  "incoming": "Grandma, those cookies smell incredible.",
+  "start": 6.368,
+  "end": 8.411
+ },
+ {
+  "id": "talking_to_other/10",
+  "scenario": "talking_to_other",
+  "context": "Mute the TV.",
+  "incoming": "Courtney, your phone's buzzing.",
+  "start": 4.836,
+  "end": 6.508
+ },
+ {
+  "id": "talking_to_other/11",
+  "scenario": "talking_to_other",
+  "context": "Add almond milk to my grocery list.",
+  "incoming": "Lawrence, Wi‑Fi's acting up again—any ideas?",
+  "start": 5.811,
+  "end": 8.505
+ },
+ {
+  "id": "talking_to_other/12",
+  "scenario": "talking_to_other",
+  "context": "What's my next calendar appointment?",
+  "incoming": "Babe, the package came—it's on the porch.",
+  "start": 5.904,
+  "end": 8.18
+ },
+ {
+  "id": "talking_to_other/13",
+  "scenario": "talking_to_other",
+  "context": "What's the latest stock price for Apple?",
+  "incoming": "Bro, pass me the hot sauce, please.",
+  "start": 6.183,
+  "end": 8.273
+ },
+ {
+  "id": "talking_to_other/14",
+  "scenario": "talking_to_other",
+  "context": "How far is it from Beijing to Shanghai?",
+  "incoming": "Bestie, can you believe that plot twist?",
+  "start": 6.229,
+  "end": 8.597
+ },
+ {
+  "id": "talking_to_other/15",
+  "scenario": "talking_to_other",
+  "context": "Give me a fun fact about dolphins.",
+  "incoming": "Laura, lights flickered again—storm maybe?",
+  "start": 5.858,
+  "end": 8.226
+ },
+ {
+  "id": "talking_to_other/16",
+  "scenario": "talking_to_other",
+  "context": "Open the garage door, please.",
+  "incoming": "Mia, dog's scratching at the door again.",
+  "start": 5.532,
+  "end": 7.715
+ },
+ {
+  "id": "talking_to_other/17",
+  "scenario": "talking_to_other",
+  "context": "What movies are playing nearby tonight?",
+  "incoming": "Dana, these shoes are killing me.",
+  "start": 6.09,
+  "end": 7.994
+ },
+ {
+  "id": "talking_to_other/18",
+  "scenario": "talking_to_other",
+  "context": "Read me the top headline from BBC News.",
+  "incoming": "Nora, umbrella's by the door if you need it.",
+  "start": 6.508,
+  "end": 8.691
+ },
+ {
+  "id": "talking_to_other/19",
+  "scenario": "talking_to_other",
+  "context": "Mute the TV.",
+  "incoming": "Owen, the Wi‑Fi just dropped again.",
+  "start": 5.022,
+  "end": 7.019
+ },
+ {
+  "id": "talking_to_other/20",
+  "scenario": "talking_to_other",
+  "context": "Send a message to Alex saying I'll be late.",
+  "incoming": "Mateo, pick up the kids at three, yeah?",
+  "start": 6.09,
+  "end": 8.133
+ },
+ {
+  "id": "talking_to_other/21",
+  "scenario": "talking_to_other",
+  "context": "Play some relaxing jazz music.",
+  "incoming": "Kayla, your song's on the radio!",
+  "start": 5.765,
+  "end": 7.623
+ },
+ {
+  "id": "talking_to_other/22",
+  "scenario": "talking_to_other",
+  "context": "Create a new note titled 'Vacation Ideas'.",
+  "incoming": "Dad, gimme a hand with this math real quick.",
+  "start": 6.554,
+  "end": 8.69
+ },
+ {
+  "id": "talking_to_other/23",
+  "scenario": "talking_to_other",
+  "context": "What's the traffic like on I‑5 south?",
+  "incoming": "Ralph, pizza's here—grab plates.",
+  "start": 6.229,
+  "end": 8.226
+ },
+ {
+  "id": "talking_to_other/24",
+  "scenario": "talking_to_other",
+  "context": "How far is it from Beijing to Shanghai?",
+  "incoming": "Dr. Chen, I'll bring the lab results tomorrow.",
+  "start": 6.554,
+  "end": 9.015
+ },
+ {
+  "id": "talking_to_other/25",
+  "scenario": "talking_to_other",
+  "context": "Set an alarm for 6:30 AM on weekdays.",
+  "incoming": "Olivia, water the plants while I'm gone, please.",
+  "start": 6.74,
+  "end": 9.248
+ },
+ {
+  "id": "talking_to_other/26",
+  "scenario": "talking_to_other",
+  "context": "What's the latest stock price for Apple?",
+  "incoming": "Principal Adams, the students are ready for you.",
+  "start": 6.09,
+  "end": 8.505
+ },
+ {
+  "id": "talking_to_other/27",
+  "scenario": "talking_to_other",
+  "context": "What's the battery level of my headphones?",
+  "incoming": "Babe, the package came—it's on the porch.",
+  "start": 6.136,
+  "end": 8.179
+ },
+ {
+  "id": "talking_to_other/28",
+  "scenario": "talking_to_other",
+  "context": "What's the air quality index today?",
+  "incoming": "Dad, microwave just quit on us.",
+  "start": 5.997,
+  "end": 8.04
+ },
+ {
+  "id": "talking_to_other/29",
+  "scenario": "talking_to_other",
+  "context": "Turn on the living room lights.",
+  "incoming": "Quinn, wanna hit the gym later?",
+  "start": 5.532,
+  "end": 6.972
+ },
+ {
+  "id": "talking_to_other/30",
+  "scenario": "talking_to_other",
+  "context": "What's the boiling point of ethanol?",
+  "incoming": "Grandpa, garden looks awesome today.",
+  "start": 5.811,
+  "end": 7.715
+ },
+ {
+  "id": "talking_to_other/31",
+  "scenario": "talking_to_other",
+  "context": "What's the score of the Mariners game?",
+  "incoming": "Yo Mark, meeting's bumped to three o'clock.",
+  "start": 5.904,
+  "end": 7.669
+ },
+ {
+  "id": "talking_to_other/32",
+  "scenario": "talking_to_other",
+  "context": "What's the score of the Mariners game?",
+  "incoming": "Cousin Mike, congrats on the new gig!",
+  "start": 5.904,
+  "end": 8.04
+ },
+ {
+  "id": "talking_to_other/33",
+  "scenario": "talking_to_other",
+  "context": "Locate my phone.",
+  "incoming": "Officer, is this the right form to fill?",
+  "start": 5.207,
+  "end": 7.065
+ },
+ {
+  "id": "talking_to_other/34",
+  "scenario": "talking_to_other",
+  "context": "Mute the TV.",
+  "incoming": "Rita, pass the soy sauce, please.",
+  "start": 5.022,
+  "end": 6.787
+ },
+ {
+  "id": "talking_to_other/35",
+  "scenario": "talking_to_other",
+  "context": "Mute the TV.",
+  "incoming": "Aunt Lily, I'll ring you tonight.",
+  "start": 5.068,
+  "end": 6.6
+ },
+ {
+  "id": "talking_to_other/36",
+  "scenario": "talking_to_other",
+  "context": "Open the garage door, please.",
+  "incoming": "Chris, your laptop's still on the table, man.",
+  "start": 5.532,
+  "end": 7.668
+ },
+ {
+  "id": "talking_to_other/37",
+  "scenario": "talking_to_other",
+  "context": "Play the next episode of my podcast.",
+  "incoming": "Trainer Kim, how many reps left again?",
+  "start": 6.09,
+  "end": 8.412
+ },
+ {
+  "id": "talking_to_other/38",
+  "scenario": "talking_to_other",
+  "context": "How far is it from Beijing to Shanghai?",
+  "incoming": "Grant, game night's at my place, 7 PM.",
+  "start": 6.322,
+  "end": 8.923
+ },
+ {
+  "id": "talking_to_other/39",
+  "scenario": "talking_to_other",
+  "context": "Read me the top headline from BBC News.",
+  "incoming": "Courtney, your phone's buzzing.",
+  "start": 6.229,
+  "end": 7.808
+ },
+ {
+  "id": "talking_to_other/40",
+  "scenario": "talking_to_other",
+  "context": "What's the boiling point of ethanol?",
+  "incoming": "Dad, gimme a hand with this math real quick.",
+  "start": 5.672,
+  "end": 8.087
+ },
+ {
+  "id": "talking_to_other/41",
+  "scenario": "talking_to_other",
+  "context": "What’s the sunrise time tomorrow?",
+  "incoming": "Sam, your parcel's at the front desk.",
+  "start": 5.811,
+  "end": 7.854
+ },
+ {
+  "id": "talking_to_other/42",
+  "scenario": "talking_to_other",
+  "context": "Add 'finish project report' to my to‑do list.",
+  "incoming": "Tyler, grab the remote, would ya?",
+  "start": 6.926,
+  "end": 8.691
+ },
+ {
+  "id": "talking_to_other/43",
+  "scenario": "talking_to_other",
+  "context": "How long does it take to drive from here to Portland?",
+  "incoming": "Alex, remember our check‑in at noon, okay?",
+  "start": 6.322,
+  "end": 8.505
+ },
+ {
+  "id": "talking_to_other/44",
+  "scenario": "talking_to_other",
+  "context": "Set the thermostat to 72 degrees Fahrenheit.",
+  "incoming": "Grandma, those cookies smell incredible.",
+  "start": 6.926,
+  "end": 8.876
+ },
+ {
+  "id": "talking_to_other/45",
+  "scenario": "talking_to_other",
+  "context": "What's the battery level of my headphones?",
+  "incoming": "Nurse Kelly, my appointment's at eleven, right?",
+  "start": 6.043,
+  "end": 8.458
+ },
+ {
+  "id": "talking_to_other/46",
+  "scenario": "talking_to_other",
+  "context": "How do you spell 'accommodation'?",
+  "incoming": "Diego, you still good for lunch Friday?",
+  "start": 5.672,
+  "end": 7.669
+ },
+ {
+  "id": "talking_to_other/47",
+  "scenario": "talking_to_other",
+  "context": "Set an alarm for 6:30 AM on weekdays.",
+  "incoming": "Derek, traffic was insanity today.",
+  "start": 6.926,
+  "end": 9.016
+ },
+ {
+  "id": "talking_to_other/48",
+  "scenario": "talking_to_other",
+  "context": "Start playing my workout playlist.",
+  "incoming": "Babe, the package came—it's on the porch.",
+  "start": 5.811,
+  "end": 8.087
+ },
+ {
+  "id": "talking_to_other/49",
+  "scenario": "talking_to_other",
+  "context": "Create a new note titled 'Vacation Ideas'.",
+  "incoming": "IT desk, can you reset my password, please?",
+  "start": 6.786,
+  "end": 9.015
+ },
+ {
+  "id": "talking_to_other/50",
+  "scenario": "talking_to_other",
+  "context": "Mute the TV.",
+  "incoming": "Doctor Smith, see you next week then.",
+  "start": 5.022,
+  "end": 6.833
+ },
+ {
+  "id": "talking_to_other/51",
+  "scenario": "talking_to_other",
+  "context": "What's the exchange rate for Japanese yen?",
+  "incoming": "Emma, sushi tonight? Your call.",
+  "start": 6.368,
+  "end": 8.133
+ },
+ {
+  "id": "talking_to_other/52",
+  "scenario": "talking_to_other",
+  "context": "How long should I steep green tea?",
+  "incoming": "Emma, sushi tonight? Your call.",
+  "start": 5.858,
+  "end": 7.53
+ },
+ {
+  "id": "talking_to_other/53",
+  "scenario": "talking_to_other",
+  "context": "How do you spell 'accommodation'?",
+  "incoming": "Zach, movie starts at eight—don't be late.",
+  "start": 5.672,
+  "end": 7.669
+ },
+ {
+  "id": "talking_to_other/54",
+  "scenario": "talking_to_other",
+  "context": "Find me a nearby coffee shop that's open now.",
+  "incoming": "Courtney, your phone's buzzing.",
+  "start": 6.368,
+  "end": 8.133
+ },
+ {
+  "id": "talking_to_other/55",
+  "scenario": "talking_to_other",
+  "context": "Give me a fun fact about dolphins.",
+  "incoming": "Dana, these shoes are killing me.",
+  "start": 5.811,
+  "end": 7.576
+ },
+ {
+  "id": "talking_to_other/56",
+  "scenario": "talking_to_other",
+  "context": "What's the battery level of my headphones?",
+  "incoming": "Emma, sushi tonight? Your call.",
+  "start": 6.09,
+  "end": 7.948
+ },
+ {
+  "id": "talking_to_other/57",
+  "scenario": "talking_to_other",
+  "context": "What's the weather like in Seattle this afternoon?",
+  "incoming": "Jess, coffee at the cafe around noon sound good?",
+  "start": 7.158,
+  "end": 9.619
+ },
+ {
+  "id": "talking_to_other/58",
+  "scenario": "talking_to_other",
+  "context": "How far is it from Beijing to Shanghai?",
+  "incoming": "Mom, could you turn that TV down a smidge?",
+  "start": 5.997,
+  "end": 8.273
+ },
+ {
+  "id": "talking_to_other/59",
+  "scenario": "talking_to_other",
+  "context": "What's the weather like in Seattle this afternoon?",
+  "incoming": "Leo, let's grab those tickets tonight.",
+  "start": 6.415,
+  "end": 8.412
+ },
+ {
+  "id": "talking_to_other/60",
+  "scenario": "talking_to_other",
+  "context": "What's the capital of Finland?",
+  "incoming": "Officer, is this the right form to fill?",
+  "start": 5.532,
+  "end": 7.39
+ },
+ {
+  "id": "talking_to_other/61",
+  "scenario": "talking_to_other",
+  "context": "How many steps have I taken today?",
+  "incoming": "Honey, did you lock the door earlier?",
+  "start": 5.811,
+  "end": 7.529
+ },
+ {
+  "id": "talking_to_other/62",
+  "scenario": "talking_to_other",
+  "context": "Start a 10‑minute meditation session.",
+  "incoming": "Gianna, this coffee is legit amazing.",
+  "start": 6.276,
+  "end": 8.552
+ },
+ {
+  "id": "talking_to_other/63",
+  "scenario": "talking_to_other",
+  "context": "How long does it take to drive from here to Portland?",
+  "incoming": "Ben, don't forget Mom's birthday Sunday.",
+  "start": 6.508,
+  "end": 8.644
+ },
+ {
+  "id": "talking_to_other/64",
+  "scenario": "talking_to_other",
+  "context": "Play some relaxing jazz music.",
+  "incoming": "Manager Liu, shipment showed up early.",
+  "start": 5.811,
+  "end": 8.087
+ },
+ {
+  "id": "talking_to_other/65",
+  "scenario": "talking_to_other",
+  "context": "How many calories are in an avocado?",
+  "incoming": "Roomie, fridge is empty again—groceries?",
+  "start": 6.276,
+  "end": 8.412
+ },
+ {
+  "id": "talking_to_other/66",
+  "scenario": "talking_to_other",
+  "context": "How do you spell 'accommodation'?",
+  "incoming": "Roomie, fridge is empty again—groceries?",
+  "start": 5.765,
+  "end": 8.041
+ },
+ {
+  "id": "talking_to_other/67",
+  "scenario": "talking_to_other",
+  "context": "Find me a nearby coffee shop that's open now.",
+  "incoming": "Tim, printer's jammed again—help?",
+  "start": 6.276,
+  "end": 8.319
+ },
+ {
+  "id": "talking_to_other/68",
+  "scenario": "talking_to_other",
+  "context": "Remind me tomorrow at 9 AM to call the dentist.",
+  "incoming": "Xena, dog's chewing your shoe!",
+  "start": 6.601,
+  "end": 8.459
+ },
+ {
+  "id": "talking_to_other/69",
+  "scenario": "talking_to_other",
+  "context": "Play some relaxing jazz music.",
+  "incoming": "Olivia, water the plants while I'm gone, please.",
+  "start": 5.811,
+  "end": 8.365
+ },
+ {
+  "id": "talking_to_other/70",
+  "scenario": "talking_to_other",
+  "context": "What day of the week will July 4, 2026 be?",
+  "incoming": "Owen, the Wi‑Fi just dropped again.",
+  "start": 7.344,
+  "end": 8.969
+ },
+ {
+  "id": "talking_to_other/71",
+  "scenario": "talking_to_other",
+  "context": "Play the next episode of my podcast.",
+  "incoming": "Nina, your cab's out front, don't miss it.",
+  "start": 6.183,
+  "end": 8.505
+ },
+ {
+  "id": "talking_to_other/72",
+  "scenario": "talking_to_other",
+  "context": "What's the population of Toronto?",
+  "incoming": "Sarah, you done with your homework yet?",
+  "start": 5.95,
+  "end": 7.808
+ },
+ {
+  "id": "talking_to_other/73",
+  "scenario": "talking_to_other",
+  "context": "Remind me tomorrow at 9 AM to call the dentist.",
+  "incoming": "Nora, umbrella's by the door if you need it.",
+  "start": 6.786,
+  "end": 8.783
+ },
+ {
+  "id": "talking_to_other/74",
+  "scenario": "talking_to_other",
+  "context": "Translate 'I love sushi' to Japanese.",
+  "incoming": "Hey Jamie, you fed the dog already, yeah?",
+  "start": 6.322,
+  "end": 8.644
+ },
+ {
+  "id": "talking_to_other/75",
+  "scenario": "talking_to_other",
+  "context": "Read my unread emails.",
+  "incoming": "Grandpa, garden looks awesome today.",
+  "start": 5.579,
+  "end": 7.715
+ },
+ {
+  "id": "talking_to_other/76",
+  "scenario": "talking_to_other",
+  "context": "What's the distance from Earth to Mars right now?",
+  "incoming": "Officer, is this the right form to fill?",
+  "start": 6.415,
+  "end": 8.365
+ },
+ {
+  "id": "talking_to_other/77",
+  "scenario": "talking_to_other",
+  "context": "How far is it from Beijing to Shanghai?",
+  "incoming": "Dr. Patel, I'm out of my meds.",
+  "start": 6.136,
+  "end": 7.994
+ },
+ {
+  "id": "talking_to_other/78",
+  "scenario": "talking_to_other",
+  "context": "Set a timer for 20 minutes so I can check the cookies.",
+  "incoming": "Kayla, your song's on the radio!",
+  "start": 6.74,
+  "end": 8.319
+ },
+ {
+  "id": "talking_to_other/79",
+  "scenario": "talking_to_other",
+  "context": "What's a good substitute for buttermilk?",
+  "incoming": "Nora, umbrella's by the door if you need it.",
+  "start": 6.09,
+  "end": 8.366
+ },
+ {
+  "id": "talking_to_other/80",
+  "scenario": "talking_to_other",
+  "context": "Define the word 'empirical'.",
+  "incoming": "Dad, microwave just quit on us.",
+  "start": 5.672,
+  "end": 7.483
+ },
+ {
+  "id": "talking_to_other/81",
+  "scenario": "talking_to_other",
+  "context": "Find me a nearby coffee shop that's open now.",
+  "incoming": "Chris, your laptop's still on the table, man.",
+  "start": 6.276,
+  "end": 8.459
+ },
+ {
+  "id": "talking_to_other/82",
+  "scenario": "talking_to_other",
+  "context": "What's the battery level of my headphones?",
+  "incoming": "Wes, need another pen over here.",
+  "start": 6.09,
+  "end": 7.808
+ },
+ {
+  "id": "talking_to_other/83",
+  "scenario": "talking_to_other",
+  "context": "Set the thermostat to 72 degrees Fahrenheit.",
+  "incoming": "Derek, traffic was insanity today.",
+  "start": 6.786,
+  "end": 9.294
+ },
+ {
+  "id": "talking_to_other/84",
+  "scenario": "talking_to_other",
+  "context": "When is the next solar eclipse?",
+  "incoming": "Mia, dog's scratching at the door again.",
+  "start": 5.625,
+  "end": 7.854
+ },
+ {
+  "id": "talking_to_other/85",
+  "scenario": "talking_to_other",
+  "context": "What's the capital of Finland?",
+  "incoming": "Tara, snag seats near the back.",
+  "start": 5.393,
+  "end": 7.204
+ },
+ {
+  "id": "talking_to_other/86",
+  "scenario": "talking_to_other",
+  "context": "How long should I steep green tea?",
+  "incoming": "Yo Mark, meeting's bumped to three o'clock.",
+  "start": 6.183,
+  "end": 8.273
+ },
+ {
+  "id": "talking_to_other/87",
+  "scenario": "talking_to_other",
+  "context": "What's the exchange rate for Japanese yen?",
+  "incoming": "Dana, these shoes are killing me.",
+  "start": 6.09,
+  "end": 7.948
+ },
+ {
+  "id": "talking_to_other/88",
+  "scenario": "talking_to_other",
+  "context": "Read me the top headline from BBC News.",
+  "incoming": "Trainer Kim, how many reps left again?",
+  "start": 6.415,
+  "end": 8.412
+ },
+ {
+  "id": "talking_to_other/89",
+  "scenario": "talking_to_other",
+  "context": "Open the garage door, please.",
+  "incoming": "Grandma, I'm fine, seriously, no worries.",
+  "start": 5.393,
+  "end": 7.576
+ },
+ {
+  "id": "talking_to_other/90",
+  "scenario": "talking_to_other",
+  "context": "Turn on do‑not‑disturb mode for one hour.",
+  "incoming": "Gabe, think we should order dessert too?",
+  "start": 6.229,
+  "end": 8.179
+ },
+ {
+  "id": "talking_to_other/91",
+  "scenario": "talking_to_other",
+  "context": "Translate 'good morning' into Spanish.",
+  "incoming": "Tim, printer's jammed again—help?",
+  "start": 5.997,
+  "end": 8.04
+ },
+ {
+  "id": "talking_to_other/92",
+  "scenario": "talking_to_other",
+  "context": "Calculate 15% of 86.",
+  "incoming": "Bestie, can you believe that plot twist?",
+  "start": 5.997,
+  "end": 8.365
+ },
+ {
+  "id": "talking_to_other/93",
+  "scenario": "talking_to_other",
+  "context": "How many calories are in an avocado?",
+  "incoming": "Dana, these shoes are killing me.",
+  "start": 6.183,
+  "end": 7.948
+ },
+ {
+  "id": "talking_to_other/94",
+  "scenario": "talking_to_other",
+  "context": "Locate my phone.",
+  "incoming": "Linda, I'm heading out for a run, back in 30.",
+  "start": 5.207,
+  "end": 7.575
+ },
+ {
+  "id": "talking_to_other/95",
+  "scenario": "talking_to_other",
+  "context": "Tell me a joke about cats.",
+  "incoming": "Monica, soup needs a tad more pepper.",
+  "start": 5.625,
+  "end": 7.622
+ },
+ {
+  "id": "talking_to_other/96",
+  "scenario": "talking_to_other",
+  "context": "How do you spell 'accommodation'?",
+  "incoming": "Mom, could you turn that TV down a smidge?",
+  "start": 5.765,
+  "end": 8.226
+ },
+ {
+  "id": "talking_to_other/97",
+  "scenario": "talking_to_other",
+  "context": "Send a message to Alex saying I'll be late.",
+  "incoming": "Grandma, those cookies smell incredible.",
+  "start": 6.136,
+  "end": 8.319
+ },
+ {
+  "id": "talking_to_other/98",
+  "scenario": "talking_to_other",
+  "context": "Give me a fun fact about dolphins.",
+  "incoming": "Roomie, fridge is empty again—groceries?",
+  "start": 6.183,
+  "end": 8.505
+ },
+ {
+  "id": "talking_to_other/99",
+  "scenario": "talking_to_other",
+  "context": "Is there rain expected this weekend?",
+  "incoming": "Doctor Smith, see you next week then.",
+  "start": 5.811,
+  "end": 7.622
+ },
+ {
+  "id": "talking_to_other/100",
+  "scenario": "talking_to_other",
+  "context": "What’s the sunrise time tomorrow?",
+  "incoming": "Trainer Kim, how many reps left again?",
+  "start": 5.765,
+  "end": 7.808
+ },
+ {
+  "id": "background_speech/1",
+  "scenario": "background_speech",
+  "context": "Turn on the study lamp.",
+  "incoming": "Oh, it's starting to rain outside.",
+  "start": 5.161,
+  "end": 7.111
+ },
+ {
+  "id": "background_speech/2",
+  "scenario": "background_speech",
+  "context": "Remind me to call Mom later today.",
+  "incoming": "We need to replace the batteries.",
+  "start": 5.904,
+  "end": 7.622
+ },
+ {
+  "id": "background_speech/3",
+  "scenario": "background_speech",
+  "context": "What's the time in Tokyo?",
+  "incoming": "Do we have any milk left?",
+  "start": 5.532,
+  "end": 6.972
+ },
+ {
+  "id": "background_speech/4",
+  "scenario": "background_speech",
+  "context": "What's the definition of serendipity?",
+  "incoming": "Have you seen my glasses anywhere?",
+  "start": 5.765,
+  "end": 7.623
+ },
+ {
+  "id": "background_speech/5",
+  "scenario": "background_speech",
+  "context": "Show me photos from last summer.",
+  "incoming": "Could you turn the TV down a bit?",
+  "start": 5.904,
+  "end": 7.947
+ },
+ {
+  "id": "background_speech/6",
+  "scenario": "background_speech",
+  "context": "Start a group call with the project team.",
+  "incoming": "We need to replace the batteries.",
+  "start": 6.276,
+  "end": 8.134
+ },
+ {
+  "id": "background_speech/7",
+  "scenario": "background_speech",
+  "context": "Remind me to stretch at 3 PM.",
+  "incoming": "What do you want for dinner tonight?",
+  "start": 5.672,
+  "end": 7.39
+ },
+ {
+  "id": "background_speech/8",
+  "scenario": "background_speech",
+  "context": "What's my current heart rate?",
+  "incoming": "I think we ran out of paper towels.",
+  "start": 5.3,
+  "end": 7.39
+ },
+ {
+  "id": "background_speech/9",
+  "scenario": "background_speech",
+  "context": "Add bananas to my grocery list.",
+  "incoming": "Mom, have you fed the cat yet?",
+  "start": 6.09,
+  "end": 7.762
+ },
+ {
+  "id": "background_speech/10",
+  "scenario": "background_speech",
+  "context": "Translate 'good evening' to French.",
+  "incoming": "We should water the plants later.",
+  "start": 5.904,
+  "end": 7.762
+ },
+ {
+  "id": "background_speech/11",
+  "scenario": "background_speech",
+  "context": "How many calories are in an avocado?",
+  "incoming": "Who used up all the hot water?",
+  "start": 6.183,
+  "end": 8.041
+ },
+ {
+  "id": "background_speech/12",
+  "scenario": "background_speech",
+  "context": "Check the status of my flight.",
+  "incoming": "Mom, have you fed the cat yet?",
+  "start": 5.625,
+  "end": 7.297
+ },
+ {
+  "id": "background_speech/13",
+  "scenario": "background_speech",
+  "context": "Find cheap flights to Seattle next weekend.",
+  "incoming": "This laundry pile is never‑ending.",
+  "start": 6.229,
+  "end": 8.365
+ },
+ {
+  "id": "background_speech/14",
+  "scenario": "background_speech",
+  "context": "Add a recurring meeting every Wednesday at 10.",
+  "incoming": "Let's bake cookies later.",
+  "start": 6.322,
+  "end": 7.808
+ },
+ {
+  "id": "background_speech/15",
+  "scenario": "background_speech",
+  "context": "Turn off all smart plugs.",
+  "incoming": "The delivery guy is at the door.",
+  "start": 5.486,
+  "end": 7.344
+ },
+ {
+  "id": "background_speech/16",
+  "scenario": "background_speech",
+  "context": "Check if my Amazon order has shipped.",
+  "incoming": "I need to finish this report by 5 PM.",
+  "start": 6.276,
+  "end": 9.109
+ },
+ {
+  "id": "background_speech/17",
+  "scenario": "background_speech",
+  "context": "What's the UV index today?",
+  "incoming": "I'm going to take a nap.",
+  "start": 5.625,
+  "end": 6.972
+ },
+ {
+  "id": "background_speech/18",
+  "scenario": "background_speech",
+  "context": "What's the time in Tokyo?",
+  "incoming": "The doorbell just rang.",
+  "start": 5.765,
+  "end": 7.158
+ },
+ {
+  "id": "background_speech/19",
+  "scenario": "background_speech",
+  "context": "What's the weather like tomorrow morning?",
+  "incoming": "I'm starving.",
+  "start": 5.672,
+  "end": 6.694
+ },
+ {
+  "id": "background_speech/20",
+  "scenario": "background_speech",
+  "context": "Start a new audiobook.",
+  "incoming": "My phone battery is almost dead.",
+  "start": 5.486,
+  "end": 7.297
+ },
+ {
+  "id": "background_speech/21",
+  "scenario": "background_speech",
+  "context": "Turn off all smart plugs.",
+  "incoming": "I think we ran out of paper towels.",
+  "start": 5.625,
+  "end": 7.761
+ },
+ {
+  "id": "background_speech/22",
+  "scenario": "background_speech",
+  "context": "Set a reminder for my dentist appointment in six months.",
+  "incoming": "Should we invite Mark to the barbecue?",
+  "start": 6.694,
+  "end": 8.737
+ },
+ {
+  "id": "background_speech/23",
+  "scenario": "background_speech",
+  "context": "Play the latest episode of my favorite podcast.",
+  "incoming": "We should water the plants later.",
+  "start": 6.601,
+  "end": 8.412
+ },
+ {
+  "id": "background_speech/24",
+  "scenario": "background_speech",
+  "context": "Enable dark mode.",
+  "incoming": "Let's watch a movie later.",
+  "start": 5.3,
+  "end": 6.925
+ },
+ {
+  "id": "background_speech/25",
+  "scenario": "background_speech",
+  "context": "Tell me a fun science fact.",
+  "incoming": "What do you want for dinner tonight?",
+  "start": 5.95,
+  "end": 7.761
+ },
+ {
+  "id": "background_speech/26",
+  "scenario": "background_speech",
+  "context": "What's the best route to the airport right now?",
+  "incoming": "I can't believe the traffic downtown today.",
+  "start": 6.09,
+  "end": 8.412
+ },
+ {
+  "id": "background_speech/27",
+  "scenario": "background_speech",
+  "context": "Define the word 'ephemeral'.",
+  "incoming": "Your coffee's getting cold.",
+  "start": 5.625,
+  "end": 7.343
+ },
+ {
+  "id": "background_speech/28",
+  "scenario": "background_speech",
+  "context": "How's Bitcoin performing today?",
+  "incoming": "Can you keep it down? I'm on a call.",
+  "start": 5.811,
+  "end": 7.947
+ },
+ {
+  "id": "background_speech/29",
+  "scenario": "background_speech",
+  "context": "When is the next full moon?",
+  "incoming": "The doorbell just rang.",
+  "start": 5.3,
+  "end": 6.693
+ },
+ {
+  "id": "background_speech/30",
+  "scenario": "background_speech",
+  "context": "Turn off the living‑room lights.",
+  "incoming": "I can't log into my account.",
+  "start": 5.625,
+  "end": 7.25
+ },
+ {
+  "id": "background_speech/31",
+  "scenario": "background_speech",
+  "context": "Did the Lakers win last night?",
+  "incoming": "My laptop just froze.",
+  "start": 5.811,
+  "end": 7.343
+ },
+ {
+  "id": "background_speech/32",
+  "scenario": "background_speech",
+  "context": "Increase the thermostat by two degrees.",
+  "incoming": "The printer's out of ink.",
+  "start": 6.322,
+  "end": 7.576
+ },
+ {
+  "id": "background_speech/33",
+  "scenario": "background_speech",
+  "context": "Start a 20‑minute meditation session.",
+  "incoming": "Who's at the door?",
+  "start": 6.461,
+  "end": 7.622
+ },
+ {
+  "id": "background_speech/34",
+  "scenario": "background_speech",
+  "context": "Play white noise for sleeping.",
+  "incoming": "I forgot to water the herbs.",
+  "start": 5.486,
+  "end": 7.158
+ },
+ {
+  "id": "background_speech/35",
+  "scenario": "background_speech",
+  "context": "What's 37 degrees Celsius in Fahrenheit?",
+  "incoming": "I should do laundry tonight.",
+  "start": 6.833,
+  "end": 8.365
+ },
+ {
+  "id": "background_speech/36",
+  "scenario": "background_speech",
+  "context": "Update me on the latest tech news.",
+  "incoming": "Have you tried this new snack?",
+  "start": 5.811,
+  "end": 7.436
+ },
+ {
+  "id": "background_speech/37",
+  "scenario": "background_speech",
+  "context": "Resume playback.",
+  "incoming": "What time is dinner?",
+  "start": 4.929,
+  "end": 6.09
+ },
+ {
+  "id": "background_speech/38",
+  "scenario": "background_speech",
+  "context": "Read me my schedule for Friday.",
+  "incoming": "Ugh, this email won't send!",
+  "start": 5.904,
+  "end": 7.715
+ },
+ {
+  "id": "background_speech/39",
+  "scenario": "background_speech",
+  "context": "How old is the Eiffel Tower?",
+  "incoming": "Can someone help me open this jar?",
+  "start": 5.672,
+  "end": 7.483
+ },
+ {
+  "id": "background_speech/40",
+  "scenario": "background_speech",
+  "context": "Disable dark mode.",
+  "incoming": "Turn the oven off when the timer beeps.",
+  "start": 5.3,
+  "end": 7.622
+ },
+ {
+  "id": "background_speech/41",
+  "scenario": "background_speech",
+  "context": "Start a 20‑minute meditation session.",
+  "incoming": "Where did the cat go?",
+  "start": 6.322,
+  "end": 7.669
+ },
+ {
+  "id": "background_speech/42",
+  "scenario": "background_speech",
+  "context": "How many calories are in an avocado?",
+  "incoming": "My back hurts from sitting all day.",
+  "start": 6.276,
+  "end": 8.319
+ },
+ {
+  "id": "background_speech/43",
+  "scenario": "background_speech",
+  "context": "What's the exchange rate for euros to dollars?",
+  "incoming": "The printer's out of ink.",
+  "start": 6.554,
+  "end": 7.901
+ },
+ {
+  "id": "background_speech/44",
+  "scenario": "background_speech",
+  "context": "What's the time in Tokyo?",
+  "incoming": "This chair is wobbly.",
+  "start": 5.347,
+  "end": 6.74
+ },
+ {
+  "id": "background_speech/45",
+  "scenario": "background_speech",
+  "context": "Turn on the study lamp.",
+  "incoming": "I forgot to water the herbs.",
+  "start": 5.207,
+  "end": 6.925
+ },
+ {
+  "id": "background_speech/46",
+  "scenario": "background_speech",
+  "context": "Update me on the latest tech news.",
+  "incoming": "My phone battery is almost dead.",
+  "start": 5.904,
+  "end": 8.04
+ },
+ {
+  "id": "background_speech/47",
+  "scenario": "background_speech",
+  "context": "Tell me a joke.",
+  "incoming": "The window is stuck again.",
+  "start": 5.022,
+  "end": 6.601
+ },
+ {
+  "id": "background_speech/48",
+  "scenario": "background_speech",
+  "context": "What are the ingredients in a margarita?",
+  "incoming": "Why is the sink dripping?",
+  "start": 5.997,
+  "end": 7.437
+ },
+ {
+  "id": "background_speech/49",
+  "scenario": "background_speech",
+  "context": "Add 'budget review' to my calendar next Monday.",
+  "incoming": "Your package just arrived.",
+  "start": 6.368,
+  "end": 8.133
+ },
+ {
+  "id": "background_speech/50",
+  "scenario": "background_speech",
+  "context": "What day of the week is July 4th, 2026?",
+  "incoming": "I still haven't finished my book.",
+  "start": 7.112,
+  "end": 8.83
+ },
+ {
+  "id": "background_speech/51",
+  "scenario": "background_speech",
+  "context": "Find a nearby coffee shop that's still open.",
+  "incoming": "Can you keep it down? I'm on a call.",
+  "start": 6.229,
+  "end": 8.458
+ },
+ {
+  "id": "background_speech/52",
+  "scenario": "background_speech",
+  "context": "Turn on the study lamp.",
+  "incoming": "Don't forget Sarah's birthday is next week.",
+  "start": 5.486,
+  "end": 7.947
+ },
+ {
+  "id": "background_speech/53",
+  "scenario": "background_speech",
+  "context": "Open my reading list.",
+  "incoming": "I can't log into my account.",
+  "start": 5.44,
+  "end": 7.065
+ },
+ {
+  "id": "background_speech/54",
+  "scenario": "background_speech",
+  "context": "What's the stock price of Tesla right now?",
+  "incoming": "My phone battery is almost dead.",
+  "start": 6.183,
+  "end": 7.948
+ },
+ {
+  "id": "background_speech/55",
+  "scenario": "background_speech",
+  "context": "Set screen brightness to 70 percent.",
+  "incoming": "The printer's out of ink.",
+  "start": 6.554,
+  "end": 7.854
+ },
+ {
+  "id": "background_speech/56",
+  "scenario": "background_speech",
+  "context": "Add 'budget review' to my calendar next Monday.",
+  "incoming": "The neighbor's music is too loud.",
+  "start": 6.415,
+  "end": 8.505
+ },
+ {
+  "id": "background_speech/57",
+  "scenario": "background_speech",
+  "context": "Lock the front door.",
+  "incoming": "I forgot to charge my watch.",
+  "start": 5.115,
+  "end": 6.74
+ },
+ {
+  "id": "background_speech/58",
+  "scenario": "background_speech",
+  "context": "What's the definition of serendipity?",
+  "incoming": "Did the power go out?",
+  "start": 6.183,
+  "end": 7.53
+ },
+ {
+  "id": "background_speech/59",
+  "scenario": "background_speech",
+  "context": "How do you say 'thank you' in Italian?",
+  "incoming": "Did you turn in your assignment?",
+  "start": 5.997,
+  "end": 7.715
+ },
+ {
+  "id": "background_speech/60",
+  "scenario": "background_speech",
+  "context": "Disable dark mode.",
+  "incoming": "I have to finish my essay.",
+  "start": 5.393,
+  "end": 6.925
+ },
+ {
+  "id": "background_speech/61",
+  "scenario": "background_speech",
+  "context": "What's the score of the Mariners game?",
+  "incoming": "Can someone help me open this jar?",
+  "start": 6.043,
+  "end": 7.854
+ },
+ {
+  "id": "background_speech/62",
+  "scenario": "background_speech",
+  "context": "Add bananas to my grocery list.",
+  "incoming": "The doorbell just rang.",
+  "start": 5.811,
+  "end": 7.158
+ },
+ {
+  "id": "background_speech/63",
+  "scenario": "background_speech",
+  "context": "Open the front door camera feed.",
+  "incoming": "I'm running low on detergent.",
+  "start": 5.579,
+  "end": 7.297
+ },
+ {
+  "id": "background_speech/64",
+  "scenario": "background_speech",
+  "context": "Add 'budget review' to my calendar next Monday.",
+  "incoming": "Who's picking up the kids today?",
+  "start": 6.694,
+  "end": 8.505
+ },
+ {
+  "id": "background_speech/65",
+  "scenario": "background_speech",
+  "context": "Remind me to stand up every hour.",
+  "incoming": "The soup is boiling over!",
+  "start": 5.625,
+  "end": 7.25
+ },
+ {
+  "id": "background_speech/66",
+  "scenario": "background_speech",
+  "context": "Add a recurring meeting every Wednesday at 10.",
+  "incoming": "We need to clean the guest room.",
+  "start": 6.415,
+  "end": 8.087
+ },
+ {
+  "id": "background_speech/67",
+  "scenario": "background_speech",
+  "context": "Remind me to stand up every hour.",
+  "incoming": "Let's bake cookies later.",
+  "start": 5.672,
+  "end": 7.204
+ },
+ {
+  "id": "background_speech/68",
+  "scenario": "background_speech",
+  "context": "Add 'call the bank' to today's agenda.",
+  "incoming": "We should plan a vacation soon.",
+  "start": 6.136,
+  "end": 7.994
+ },
+ {
+  "id": "background_speech/69",
+  "scenario": "background_speech",
+  "context": "Track my package from FedEx.",
+  "incoming": "This chair is wobbly.",
+  "start": 5.95,
+  "end": 7.297
+ },
+ {
+  "id": "background_speech/70",
+  "scenario": "background_speech",
+  "context": "Text Alex 'I'll be there in five'.",
+  "incoming": "Who left the lights on in the garage?",
+  "start": 6.183,
+  "end": 8.226
+ },
+ {
+  "id": "background_speech/71",
+  "scenario": "background_speech",
+  "context": "Switch the TV to HDMI‑2.",
+  "incoming": "Do we have any milk left?",
+  "start": 6.136,
+  "end": 7.576
+ },
+ {
+  "id": "background_speech/72",
+  "scenario": "background_speech",
+  "context": "How many miles is a 10K?",
+  "incoming": "I forgot to charge my watch.",
+  "start": 5.718,
+  "end": 7.343
+ },
+ {
+  "id": "background_speech/73",
+  "scenario": "background_speech",
+  "context": "Open my reading list.",
+  "incoming": "Who left the lights on in the garage?",
+  "start": 5.254,
+  "end": 7.39
+ },
+ {
+  "id": "background_speech/74",
+  "scenario": "background_speech",
+  "context": "How many miles is a 10K?",
+  "incoming": "The meeting got rescheduled.",
+  "start": 5.811,
+  "end": 7.483
+ },
+ {
+  "id": "background_speech/75",
+  "scenario": "background_speech",
+  "context": "Schedule a meeting with John on Friday at 2.",
+  "incoming": "The meeting got rescheduled.",
+  "start": 6.554,
+  "end": 8.272
+ },
+ {
+  "id": "background_speech/76",
+  "scenario": "background_speech",
+  "context": "Cancel all timers.",
+  "incoming": "I have to call my mom back.",
+  "start": 5.254,
+  "end": 6.833
+ },
+ {
+  "id": "background_speech/77",
+  "scenario": "background_speech",
+  "context": "What's the definition of serendipity?",
+  "incoming": "Have you seen my glasses anywhere?",
+  "start": 5.95,
+  "end": 7.9
+ },
+ {
+  "id": "background_speech/78",
+  "scenario": "background_speech",
+  "context": "Turn off the bedroom fan.",
+  "incoming": "Can you water the flowers tomorrow?",
+  "start": 5.625,
+  "end": 7.483
+ },
+ {
+  "id": "background_speech/79",
+  "scenario": "background_speech",
+  "context": "Translate 'good evening' to French.",
+  "incoming": "Who ate the last cupcake?",
+  "start": 5.811,
+  "end": 7.483
+ },
+ {
+  "id": "background_speech/80",
+  "scenario": "background_speech",
+  "context": "How long will it take to drive to work?",
+  "incoming": "My back hurts from sitting all day.",
+  "start": 5.765,
+  "end": 7.901
+ },
+ {
+  "id": "background_speech/81",
+  "scenario": "background_speech",
+  "context": "Set a 10‑minute timer for pasta.",
+  "incoming": "Can you believe how hot it is today?",
+  "start": 6.183,
+  "end": 8.226
+ },
+ {
+  "id": "background_speech/82",
+  "scenario": "background_speech",
+  "context": "What's 37 degrees Celsius in Fahrenheit?",
+  "incoming": "My phone battery is almost dead.",
+  "start": 6.601,
+  "end": 8.691
+ },
+ {
+  "id": "background_speech/83",
+  "scenario": "background_speech",
+  "context": "Find vegetarian restaurants open now.",
+  "incoming": "Did the power go out?",
+  "start": 6.276,
+  "end": 7.762
+ },
+ {
+  "id": "background_speech/84",
+  "scenario": "background_speech",
+  "context": "Schedule a meeting with John on Friday at 2.",
+  "incoming": "We're almost out of gas.",
+  "start": 6.508,
+  "end": 8.04
+ },
+ {
+  "id": "background_speech/85",
+  "scenario": "background_speech",
+  "context": "Read me my schedule for Friday.",
+  "incoming": "Someone left the fridge open.",
+  "start": 5.718,
+  "end": 7.297
+ },
+ {
+  "id": "background_speech/86",
+  "scenario": "background_speech",
+  "context": "What's the best route to the airport right now?",
+  "incoming": "We're almost out of gas.",
+  "start": 6.09,
+  "end": 7.622
+ },
+ {
+  "id": "background_speech/87",
+  "scenario": "background_speech",
+  "context": "Set screen brightness to 70 percent.",
+  "incoming": "Let's grab coffee later.",
+  "start": 6.276,
+  "end": 7.901
+ },
+ {
+  "id": "background_speech/88",
+  "scenario": "background_speech",
+  "context": "Start a workout routine for beginners.",
+  "incoming": "Who's at the door?",
+  "start": 6.276,
+  "end": 7.344
+ },
+ {
+  "id": "background_speech/89",
+  "scenario": "background_speech",
+  "context": "Play some upbeat jazz music.",
+  "incoming": "Did the power go out?",
+  "start": 5.997,
+  "end": 7.437
+ },
+ {
+  "id": "background_speech/90",
+  "scenario": "background_speech",
+  "context": "Play a lullaby playlist.",
+  "incoming": "Oh, it's starting to rain outside.",
+  "start": 5.579,
+  "end": 7.622
+ },
+ {
+  "id": "background_speech/91",
+  "scenario": "background_speech",
+  "context": "What day of the week is July 4th, 2026?",
+  "incoming": "I'll be back in ten.",
+  "start": 6.601,
+  "end": 7.901
+ },
+ {
+  "id": "background_speech/92",
+  "scenario": "background_speech",
+  "context": "Open my reading list.",
+  "incoming": "Who ate the last cupcake?",
+  "start": 5.207,
+  "end": 6.832
+ },
+ {
+  "id": "background_speech/93",
+  "scenario": "background_speech",
+  "context": "Add 'budget review' to my calendar next Monday.",
+  "incoming": "Why is the internet so slow?",
+  "start": 6.601,
+  "end": 8.459
+ },
+ {
+  "id": "background_speech/94",
+  "scenario": "background_speech",
+  "context": "Track my package from FedEx.",
+  "incoming": "Let's watch a movie later.",
+  "start": 5.672,
+  "end": 7.158
+ },
+ {
+  "id": "background_speech/95",
+  "scenario": "background_speech",
+  "context": "Set a 10‑minute timer for pasta.",
+  "incoming": "Turn the oven off when the timer beeps.",
+  "start": 5.95,
+  "end": 8.04
+ },
+ {
+  "id": "background_speech/96",
+  "scenario": "background_speech",
+  "context": "Turn on the backyard sprinklers for 15 minutes.",
+  "incoming": "My phone battery is almost dead.",
+  "start": 6.786,
+  "end": 8.736
+ },
+ {
+  "id": "background_speech/97",
+  "scenario": "background_speech",
+  "context": "Did the Lakers win last night?",
+  "incoming": "Hey, where did I put my keys again?",
+  "start": 5.625,
+  "end": 7.529
+ },
+ {
+  "id": "background_speech/98",
+  "scenario": "background_speech",
+  "context": "Play a lullaby playlist.",
+  "incoming": "I misplaced my passport.",
+  "start": 5.532,
+  "end": 7.064
+ },
+ {
+  "id": "background_speech/99",
+  "scenario": "background_speech",
+  "context": "Play a lullaby playlist.",
+  "incoming": "Who left the lights on in the garage?",
+  "start": 5.765,
+  "end": 7.808
+ },
+ {
+  "id": "background_speech/100",
+  "scenario": "background_speech",
+  "context": "What's the meaning of life?",
+  "incoming": "I'm starving.",
+  "start": 5.3,
+  "end": 6.368
+ }
+]
