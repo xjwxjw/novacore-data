@@ -26,23 +26,38 @@ function behaviorResults(results){
     ['overall','总体'], ['user_interruption','明确打断'], ['user_backchannel','用户附和'],
     ['talking_to_other','用户对旁人说话'], ['background_speech','背景语音']
   ];
-  const models = [
+  const localModels = [
     ['direct25','NovaCore 原始 25% 版','nova'],
     ['qwen3-498','Qwen3-Omni 原始权重','qwen']
+  ].map(([id,name,color]) => ({
+    name,color,values:metrics.map(([key]) => 100*results[id][key][0]/results[id][key][1])
+  }));
+  // Four published behavior rates in metric order, excluding overall.
+  const published = [
+    ['Joy-Duplex','venus',[88,96,72,85]],
+    ['Realtime-Venus-Audio','venus',[75,97,88,86]],
+    ['Realtime-Venus-Omni','venus',[60,92,90,85]],
+    ['Gemini 3.1 Live','venus',[77,95,66,66]],
+    ['MiniCPM-o 4.5','venus',[60,95,79,82]],
+    ['Covo-Audio-Chat','emnlp',[81,98,40,11]],
+    ['Fun-Audio-Chat','emnlp',[71.5,95.9,7,9]]
   ];
-  const legend = models.map(([,name,color]) =>
-    '<span><i class="'+color+'"></i>'+name+'</span>').join('');
-  const groups = metrics.map(([key,title]) => {
-    const bars = models.map(([arm,name,color]) => {
-      const [correct,total] = results[arm][key];
-      const percent = (100*correct/total).toFixed(1);
-      return '<div class="score-series" role="img" aria-label="'+title+'，'+name+'，'+correct+' / '+total+'，'+percent+'%"><div class="score-column '+color+'" style="height:'+percent+'%"><b>'+percent+'%</b></div></div>';
-    }).join('');
-    return '<div class="score-pair">'+bars+'<strong>'+title+'</strong></div>';
-  }).join('');
+  const weights = [200,98,100,100];
+  const models = localModels.concat(published.map(([name,color,rates]) => {
+    const overall = rates.reduce((sum,rate,i) => sum + rate*weights[i],0)/498;
+    return {name,color,estimated:true,values:[overall,...rates]};
+  }));
   const ticks = [0,25,50,75,100].map(n =>
     '<div class="score-tick" style="bottom:'+n+'%"><span>'+n+'%</span></div>').join('');
-  return '<section class="behavior-results"><h3>模型评测结果</h3><p>行为正确率 · 同一批 498 个测试案例 · 本地 Qwen3.8-27B 评审</p><div class="score-legend">'+legend+'</div><div class="score-scroll" tabindex="0" aria-label="模型行为正确率柱状图"><div class="score-chart">'+ticks+groups+'</div></div></section>';
+  const charts = metrics.map(([,title],i) => {
+    const bars = models.map(model => {
+      const value = model.values[i].toFixed(1);
+      const label = (model.estimated && i===0 ? '≈' : '')+value+'%';
+      return '<div class="score-series" role="img" aria-label="'+model.name+'，'+title+'，'+label+'"><div class="score-column '+model.color+'" style="height:'+value+'%"><b>'+label+'</b></div><span>'+model.name+'</span></div>';
+    }).join('');
+    return '<section class="score-panel"><h4>'+title+'</h4><div class="score-scroll" tabindex="0" aria-label="'+title+'正确率柱状图"><div class="score-chart">'+ticks+bars+'</div></div></section>';
+  }).join('');
+  return '<section class="behavior-results"><h3>模型评测结果</h3><p>NovaCore 和 Qwen3-Omni 为本地 Qwen3.8-27B 评审结果。公开基线采用各报告的评测设置。总体标注 ≈ 的数值按 200、98、100、100 个案例加权估算。</p><div class="score-legend"><span><i class="nova"></i>NovaCore · 本地</span><span><i class="qwen"></i>Qwen3-Omni · 本地</span><span><i class="venus"></i><a href="https://arxiv.org/html/2609.13814v3#S7.T6">Realtime-Venus 报告 · 表 6</a></span><span><i class="emnlp"></i><a href="https://aclanthology.org/2026.emnlp-main.1126.pdf#page=7">EMNLP 2026 独立评测 · 表 3</a></span></div>'+charts+'</section>';
 }
 
 function overview(s,records,all){
