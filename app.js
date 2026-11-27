@@ -30,15 +30,19 @@ function behaviorResults(results){
     ['direct25','NovaCore 原始 25% 版','nova'],
     ['qwen3-498','Qwen3-Omni 原始权重','qwen']
   ];
+  const legend = models.map(([,name,color]) =>
+    '<span><i class="'+color+'"></i>'+name+'</span>').join('');
   const groups = metrics.map(([key,title]) => {
     const bars = models.map(([arm,name,color]) => {
       const [correct,total] = results[arm][key];
       const percent = (100*correct/total).toFixed(1);
-      return '<div class="behavior-bar"><span>'+name+'</span><span class="behavior-track" aria-hidden="true"><i class="'+color+'" style="width:'+percent+'%"></i></span><span><b>'+percent+'%</b> · '+correct+'/'+total+'</span></div>';
+      return '<div class="score-series" role="img" aria-label="'+title+'，'+name+'，'+correct+' / '+total+'，'+percent+'%"><div class="score-column '+color+'" style="height:'+percent+'%"><b>'+percent+'%</b></div><small>'+correct+'/'+total+'</small></div>';
     }).join('');
-    return '<div class="behavior-group"><h4>'+title+'</h4>'+bars+'</div>';
+    return '<div class="score-pair">'+bars+'<strong>'+title+'</strong></div>';
   }).join('');
-  return '<section class="behavior-results"><h3>模型评测结果</h3><p>行为正确率 · 同一批 498 个测试案例 · 本地 Qwen3.8-27B 评审</p>'+groups+'</section>';
+  const ticks = [0,25,50,75,100].map(n =>
+    '<div class="score-tick" style="bottom:'+n+'%"><span>'+n+'%</span></div>').join('');
+  return '<section class="behavior-results"><h3>模型评测结果</h3><p>行为正确率 · 同一批 498 个测试案例 · 本地 Qwen3.8-27B 评审</p><div class="score-legend">'+legend+'</div><div class="score-scroll" tabindex="0" aria-label="模型行为正确率柱状图"><div class="score-chart">'+ticks+groups+'</div></div></section>';
 }
 
 function overview(s,records,all){

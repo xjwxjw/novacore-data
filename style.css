@@ -40,10 +40,17 @@
 
 .behavior-results{margin-top:18px;padding-top:16px;border-top:1px solid #c9d9db}
 .behavior-results h3{margin:0}.behavior-results p{font-size:.9rem;color:#465c66}
-.behavior-group{padding:10px 0;border-top:1px solid #dbe6e5}
-.behavior-group h4{margin:0 0 6px}
-.behavior-bar{display:grid;grid-template-columns:11rem minmax(0,1fr) 9rem;gap:10px;align-items:center;margin:5px 0;font-size:.9rem;font-variant-numeric:tabular-nums}
-.behavior-bar>span:last-child{text-align:right}
-.behavior-track{height:12px;background:#edf1f3;border-radius:2px;overflow:hidden}
-.behavior-track i{display:block;height:100%}.behavior-track .nova{background:#18796d}.behavior-track .qwen{background:#476f99}
-@media(max-width:600px){.behavior-bar{grid-template-columns:1fr auto;gap:4px;margin:9px 0}.behavior-track{grid-column:1/-1;grid-row:2}}
+.score-legend{display:flex;flex-wrap:wrap;gap:8px 20px;font-size:.9rem}
+.score-legend span{display:inline-flex;align-items:center;gap:6px}
+.score-legend i{width:.85em;height:.85em;border-radius:2px}
+.behavior-results .nova{background:#18796d}.behavior-results .qwen{background:#476f99}
+.score-scroll{overflow-x:auto;padding:30px 4px 62px 3.2rem}
+.score-chart{position:relative;display:grid;grid-template-columns:repeat(5,1fr);min-width:650px;height:225px;font-variant-numeric:tabular-nums}
+.score-tick{position:absolute;left:0;right:0;border-top:1px solid #dbe6e5}.score-tick:first-child{border-color:#78918e}
+.score-tick span{position:absolute;right:calc(100% + 6px);transform:translateY(-50%);font-size:.8rem;color:#465c66}
+.score-pair{position:relative;display:flex;justify-content:center;gap:6px}
+.score-series{display:flex;align-items:flex-end;justify-content:center;width:44px;height:100%;position:relative}
+.score-column{position:relative;width:76%;border-radius:3px 3px 0 0}
+.score-column b,.score-series small,.score-pair>strong{position:absolute;left:50%;transform:translateX(-50%);white-space:nowrap}
+.score-column b{bottom:calc(100% + 3px);font-size:.8rem}.score-series small{top:calc(100% + 4px);font-size:.76rem;color:#465c66}
+.score-pair>strong{top:calc(100% + 26px);font-size:.9rem}
