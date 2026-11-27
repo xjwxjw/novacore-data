@@ -37,3 +37,10 @@
 .chart-nodes text{fill:#123c39;font-size:17px;font-weight:650;text-anchor:middle}.chart-nodes .terminal rect{fill:#164e4b}.chart-nodes .terminal text{fill:white}
 .chart-nodes a:hover rect,.chart-nodes a:focus rect{stroke:#132f4e;stroke-width:4}.pipe-stage:target{outline:3px solid #168773;scroll-margin:20px}
 @media(max-width:640px){.pipeline-diagram{padding:12px 5px 0}.pipeline-diagram figcaption{padding:0 6px 8px}.pipeline-diagram svg{margin-top:8px}}
+
+.behavior-results{margin-top:18px;padding-top:16px;border-top:1px solid #c9d9db}
+.behavior-results h3{margin:0}.behavior-results p{font-size:.9rem;color:#465c66}
+.behavior-results table{width:100%;table-layout:fixed;font-variant-numeric:tabular-nums}
+.behavior-results :is(th,td){text-align:right;white-space:normal}.behavior-results th:first-child{text-align:left}
+.behavior-results td small{display:block;color:#465c66;font-size:.875rem}
+.behavior-results tbody tr:first-child{background:#e9f4f1}
