@@ -43,8 +43,7 @@
 .score-legend{display:flex;flex-wrap:wrap;gap:8px 20px;font-size:.9rem}
 .score-legend span{display:inline-flex;align-items:center;gap:6px}
 .score-legend i{width:.85em;height:.85em;border-radius:2px}
-.behavior-results .nova{background:#18796d}.behavior-results .qwen{background:#476f99}
-.behavior-results .venus{background:#876239}.behavior-results .emnlp{background:#805f91}
+.behavior-results .nova{background:#18796d}.behavior-results .baseline{background:#8a9399}
 .score-panel{margin-top:20px}.score-panel h4{margin:0}
 .score-scroll{overflow-x:auto;padding:28px 4px 60px 3.2rem}
 .score-chart{position:relative;display:grid;grid-template-columns:repeat(9,minmax(0,1fr));min-width:800px;height:170px;font-variant-numeric:tabular-nums}

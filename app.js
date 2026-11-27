@@ -28,24 +28,24 @@ function behaviorResults(results){
   ];
   const localModels = [
     ['direct25','NovaCore 原始 25% 版','nova'],
-    ['qwen3-498','Qwen3-Omni 原始权重','qwen']
+    ['qwen3-498','Qwen3-Omni 原始权重','baseline']
   ].map(([id,name,color]) => ({
     name,color,values:metrics.map(([key]) => 100*results[id][key][0]/results[id][key][1])
   }));
   // Four published behavior rates in metric order, excluding overall.
   const published = [
-    ['Joy-Duplex','venus',[88,96,72,85]],
-    ['Realtime-Venus-Audio','venus',[75,97,88,86]],
-    ['Realtime-Venus-Omni','venus',[60,92,90,85]],
-    ['Gemini 3.1 Live','venus',[77,95,66,66]],
-    ['MiniCPM-o 4.5','venus',[60,95,79,82]],
-    ['Covo-Audio-Chat','emnlp',[81,98,40,11]],
-    ['Fun-Audio-Chat','emnlp',[71.5,95.9,7,9]]
+    ['Joy-Duplex',[88,96,72,85]],
+    ['Realtime-Venus-Audio',[75,97,88,86]],
+    ['Realtime-Venus-Omni',[60,92,90,85]],
+    ['Gemini 3.1 Live',[77,95,66,66]],
+    ['MiniCPM-o 4.5',[60,95,79,82]],
+    ['Covo-Audio-Chat',[81,98,40,11]],
+    ['Fun-Audio-Chat',[71.5,95.9,7,9]]
   ];
   const weights = [200,98,100,100];
-  const models = localModels.concat(published.map(([name,color,rates]) => {
+  const models = localModels.concat(published.map(([name,rates]) => {
     const overall = rates.reduce((sum,rate,i) => sum + rate*weights[i],0)/498;
-    return {name,color,estimated:true,values:[overall,...rates]};
+    return {name,color:'baseline',estimated:true,values:[overall,...rates]};
   }));
   const ticks = [0,25,50,75,100].map(n =>
     '<div class="score-tick" style="bottom:'+n+'%"><span>'+n+'%</span></div>').join('');
@@ -58,7 +58,7 @@ function behaviorResults(results){
     }).join('');
     return '<section class="score-panel"><h4>'+title+'</h4><div class="score-scroll" tabindex="0" aria-label="'+title+'正确率柱状图"><div class="score-chart">'+ticks+bars+'</div></div></section>';
   }).join('');
-  return '<section class="behavior-results"><h3>模型评测结果</h3><p>NovaCore 和 Qwen3-Omni 为本地 Qwen3.8-27B 评审结果。公开基线采用各报告的评测设置。总体标注 ≈ 的数值按 200、98、100、100 个案例加权估算。</p><div class="score-legend"><span><i class="nova"></i>NovaCore · 本地</span><span><i class="qwen"></i>Qwen3-Omni · 本地</span><span><i class="venus"></i><a href="https://arxiv.org/html/2609.13814v3#S7.T6">Realtime-Venus 报告 · 表 6</a></span><span><i class="emnlp"></i><a href="https://aclanthology.org/2026.emnlp-main.1126.pdf#page=7">EMNLP 2026 独立评测 · 表 3</a></span></div>'+charts+'</section>';
+  return '<section class="behavior-results"><h3>模型评测结果</h3><p>NovaCore 和 Qwen3-Omni 为本地 Qwen3.8-27B 评审结果。公开基线采用各报告的评测设置。总体标注 ≈ 的数值按 200、98、100、100 个案例加权估算。</p><div class="score-legend"><span><i class="nova"></i>NovaCore</span><span><i class="baseline"></i>其他基线</span><span><a href="https://arxiv.org/html/2609.13814v3#S7.T6">Realtime-Venus 报告 · 表 6</a></span><span><a href="https://aclanthology.org/2026.emnlp-main.1126.pdf#page=7">EMNLP 2026 独立评测 · 表 3</a></span></div>'+charts+'</section>';
 }
 
 function overview(s,records,all){
