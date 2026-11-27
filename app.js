@@ -50,7 +50,8 @@ function behaviorResults(results){
   const ticks = [0,25,50,75,100].map(n =>
     '<div class="score-tick" style="bottom:'+n+'%"><span>'+n+'%</span></div>').join('');
   const charts = metrics.map(([,title],i) => {
-    const bars = models.map(model => {
+    const ranked = models.slice().sort((a,b) => b.values[i] - a.values[i]);
+    const bars = ranked.map(model => {
       const value = model.values[i].toFixed(1);
       const label = (model.estimated && i===0 ? '≈' : '')+value+'%';
       return '<div class="score-series" role="img" aria-label="'+model.name+'，'+title+'，'+label+'"><div class="score-column '+model.color+'" style="height:'+value+'%"><b>'+label+'</b></div><span>'+model.name+'</span></div>';
