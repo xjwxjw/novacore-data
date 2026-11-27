@@ -36,7 +36,7 @@ function behaviorResults(results){
     const bars = models.map(([arm,name,color]) => {
       const [correct,total] = results[arm][key];
       const percent = (100*correct/total).toFixed(1);
-      return '<div class="score-series" role="img" aria-label="'+title+'，'+name+'，'+correct+' / '+total+'，'+percent+'%"><div class="score-column '+color+'" style="height:'+percent+'%"><b>'+percent+'%</b></div><small>'+correct+'/'+total+'</small></div>';
+      return '<div class="score-series" role="img" aria-label="'+title+'，'+name+'，'+correct+' / '+total+'，'+percent+'%"><div class="score-column '+color+'" style="height:'+percent+'%"><b>'+percent+'%</b></div></div>';
     }).join('');
     return '<div class="score-pair">'+bars+'<strong>'+title+'</strong></div>';
   }).join('');
