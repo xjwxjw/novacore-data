@@ -7,13 +7,7 @@ const refs = {topic:'话题','topic+topic_detail':'细分话题','overlap_topic+
 let version=0;
 const link = (params,title) => '<a href="#benchmark/fdb15/samples?'+esc(new URLSearchParams(params))+'">'+title+'</a>';
 const card=(title,v,params)=>'<div class="card"><span>'+title+'</span><strong>'+(params?link(params,num(v)):esc(v))+'</strong></div>';
-const overviewPreference = 'novacore.fdb15.overview.collapsed';
 let overviewCollapsed = true;
-try {
-  overviewCollapsed = localStorage.getItem(overviewPreference) !== 'false';
-} catch {
-  // The toggle still works in memory when browser storage is unavailable.
-}
 
 app.addEventListener('click', event => {
   const toggle = event.target.closest('button[aria-controls="fdb-overview-body"]');
@@ -23,11 +17,7 @@ app.addEventListener('click', event => {
   body.hidden = overviewCollapsed;
   toggle.setAttribute('aria-expanded', String(!overviewCollapsed));
   toggle.textContent = overviewCollapsed ? '展开' : '收起';
-  try {
-    localStorage.setItem(overviewPreference, String(overviewCollapsed));
-  } catch {
-    // Keep the current preference for this page.
-  }
+
 });
 
 function behaviorResults(results){
@@ -36,18 +26,23 @@ function behaviorResults(results){
     ['overall','总体'], ['user_interruption','明确打断'], ['user_backchannel','用户附和'],
     ['talking_to_other','用户对旁人说话'], ['background_speech','背景语音']
   ];
-  const rows = metrics.map(([key,title]) => {
-    const cells = ['direct25','qwen3-498'].map(arm => {
+  const models = [
+    ['direct25','NovaCore 原始 25% 版','nova'],
+    ['qwen3-498','Qwen3-Omni 原始权重','qwen']
+  ];
+  const groups = metrics.map(([key,title]) => {
+    const bars = models.map(([arm,name,color]) => {
       const [correct,total] = results[arm][key];
-      return '<td><strong>'+(100*correct/total).toFixed(1)+'%</strong><small>'+correct+' / '+total+'</small></td>';
+      const percent = (100*correct/total).toFixed(1);
+      return '<div class="behavior-bar"><span>'+name+'</span><span class="behavior-track" aria-hidden="true"><i class="'+color+'" style="width:'+percent+'%"></i></span><span><b>'+percent+'%</b> · '+correct+'/'+total+'</span></div>';
     }).join('');
-    return '<tr><th scope="row">'+title+'</th>'+cells+'</tr>';
+    return '<div class="behavior-group"><h4>'+title+'</h4>'+bars+'</div>';
   }).join('');
-  return '<section class="behavior-results"><h3>模型评测结果</h3><p>行为正确率 · 同一批 498 个测试案例 · 本地 Qwen3.8-27B 评审</p><table aria-label="FullDuplexBench v1.5 行为正确率"><thead><tr><th scope="col">测试场景</th><th scope="col">NovaCore<br>原始 25% 版</th><th scope="col">Qwen3-Omni<br>原始权重</th></tr></thead><tbody>'+rows+'</tbody></table></section>';
+  return '<section class="behavior-results"><h3>模型评测结果</h3><p>行为正确率 · 同一批 498 个测试案例 · 本地 Qwen3.8-27B 评审</p>'+groups+'</section>';
 }
 
 function overview(s,records,all){
-  return '<h1>Benchmark 目录</h1><section class="entry"><div class="entry-heading"><h2>FullDuplexBench v1.5</h2><button type="button" aria-controls="fdb-overview-body" aria-expanded="'+!overviewCollapsed+'">'+(overviewCollapsed?'展开':'收起')+'</button></div><div id="fdb-overview-body"'+(overviewCollapsed?' hidden':'')+'><p>用有插话与无插话的两次测试，对照模型的停声、接话时机与回应内容。第 '+s.status.last_review+' 批已审阅</p><a class="button benchmark-pipeline" href="pipeline.html">查看数据合成流程</a>'+distributionChart(s,records,all,'#overview')+coverage(s)+'</div>'+behaviorResults(s.fdb_behavior_results)+'</section>';
+  return '<h1>Benchmark 目录</h1><section class="entry"><div class="entry-heading"><h2>FullDuplexBench v1.5</h2><button type="button" aria-controls="fdb-overview-body" aria-expanded="'+!overviewCollapsed+'">'+(overviewCollapsed?'展开':'收起')+'</button></div><div id="fdb-overview-body"'+(overviewCollapsed?' hidden':'')+'><p>用有插话与无插话的两次测试，对照模型的停声、接话时机与回应内容。第 '+s.status.last_review+' 批已审阅</p><a class="button benchmark-pipeline" href="pipeline.html">查看数据合成流程</a>'+distributionChart(s,records,all,'#overview')+behaviorResults(s.fdb_behavior_results)+coverage(s)+'</div></section>';
 }
 function coverage(s){
   const {bilingual,whole_review_clear:reviewed}=s.coverage;

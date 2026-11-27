@@ -40,7 +40,10 @@
 
 .behavior-results{margin-top:18px;padding-top:16px;border-top:1px solid #c9d9db}
 .behavior-results h3{margin:0}.behavior-results p{font-size:.9rem;color:#465c66}
-.behavior-results table{width:100%;table-layout:fixed;font-variant-numeric:tabular-nums}
-.behavior-results :is(th,td){text-align:right;white-space:normal}.behavior-results th:first-child{text-align:left}
-.behavior-results td small{display:block;color:#465c66;font-size:.875rem}
-.behavior-results tbody tr:first-child{background:#e9f4f1}
+.behavior-group{padding:10px 0;border-top:1px solid #dbe6e5}
+.behavior-group h4{margin:0 0 6px}
+.behavior-bar{display:grid;grid-template-columns:11rem minmax(0,1fr) 9rem;gap:10px;align-items:center;margin:5px 0;font-size:.9rem;font-variant-numeric:tabular-nums}
+.behavior-bar>span:last-child{text-align:right}
+.behavior-track{height:12px;background:#edf1f3;border-radius:2px;overflow:hidden}
+.behavior-track i{display:block;height:100%}.behavior-track .nova{background:#18796d}.behavior-track .qwen{background:#476f99}
+@media(max-width:600px){.behavior-bar{grid-template-columns:1fr auto;gap:4px;margin:9px 0}.behavior-track{grid-column:1/-1;grid-row:2}}
